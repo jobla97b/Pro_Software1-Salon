@@ -121,22 +121,43 @@
   <data name="034-maximizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\034-maximizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="009-diseno-grafico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\009-diseno-grafico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="031-cancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\031-cancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="menu_horizontal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu_horizontal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="services (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\services (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fact-blanco-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fact-blanco-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Citas-blanco-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Citas-blanco-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="015-menos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\015-menos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="team (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\team (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="power (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\power (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="031-cancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\031-cancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="009-diseno-grafico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\009-diseno-grafico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="group (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\group (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="office-material (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\office-material (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="history-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\history-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

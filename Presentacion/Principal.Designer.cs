@@ -32,11 +32,20 @@
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.Contenedor = new System.Windows.Forms.Panel();
             this.Menu = new System.Windows.Forms.Panel();
-            this.pSesion = new System.Windows.Forms.PictureBox();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblCargo = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.Titulo = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.HorayFecha = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pSesion = new System.Windows.Forms.PictureBox();
             this.pInfo2 = new System.Windows.Forms.PictureBox();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnServicios = new System.Windows.Forms.Button();
@@ -44,29 +53,22 @@
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnFacturacion = new System.Windows.Forms.Button();
             this.btnCitas = new System.Windows.Forms.Button();
-            this.lblCargo = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
             this.pUser = new System.Windows.Forms.PictureBox();
             this.pMenu = new System.Windows.Forms.PictureBox();
             this.pInformacion = new System.Windows.Forms.PictureBox();
-            this.Titulo = new System.Windows.Forms.Panel();
             this.pCerrar = new System.Windows.Forms.PictureBox();
             this.pMax = new System.Windows.Forms.PictureBox();
             this.pRestaurar = new System.Windows.Forms.PictureBox();
             this.pMin = new System.Windows.Forms.PictureBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.HorayFecha = new System.Windows.Forms.Timer(this.components);
             this.panelPrincipal.SuspendLayout();
             this.Menu.SuspendLayout();
+            this.Titulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pSesion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pInfo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pInformacion)).BeginInit();
-            this.Titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRestaurar)).BeginInit();
@@ -99,6 +101,7 @@
             // 
             this.Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Menu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Menu.Controls.Add(this.pictureBox1);
             this.Menu.Controls.Add(this.lblHora);
             this.Menu.Controls.Add(this.lblFecha);
             this.Menu.Controls.Add(this.pSesion);
@@ -125,16 +128,29 @@
             this.Menu.Size = new System.Drawing.Size(280, 600);
             this.Menu.TabIndex = 1;
             // 
-            // pSesion
+            // lblHora
             // 
-            this.pSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.pSesion.Image = global::Presentacion.Properties.Resources.power__1_;
-            this.pSesion.Location = new System.Drawing.Point(252, 119);
-            this.pSesion.Name = "pSesion";
-            this.pSesion.Size = new System.Drawing.Size(25, 25);
-            this.pSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pSesion.TabIndex = 0;
-            this.pSesion.TabStop = false;
+            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.Color.White;
+            this.lblHora.Location = new System.Drawing.Point(63, 527);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(210, 39);
+            this.lblHora.TabIndex = 13;
+            this.lblHora.Text = "Hora";
+            this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ForeColor = System.Drawing.Color.White;
+            this.lblFecha.Location = new System.Drawing.Point(63, 566);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(210, 24);
+            this.lblFecha.TabIndex = 12;
+            this.lblFecha.Text = "Fecha";
+            this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -184,133 +200,6 @@
             this.label1.Text = "Nombre:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pInfo2
-            // 
-            this.pInfo2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pInfo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.pInfo2.Location = new System.Drawing.Point(0, 513);
-            this.pInfo2.Name = "pInfo2";
-            this.pInfo2.Size = new System.Drawing.Size(280, 86);
-            this.pInfo2.TabIndex = 0;
-            this.pInfo2.TabStop = false;
-            // 
-            // btnClientes
-            // 
-            this.btnClientes.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnClientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClientes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnClientes.FlatAppearance.BorderSize = 0;
-            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientes.ForeColor = System.Drawing.Color.White;
-            this.btnClientes.Location = new System.Drawing.Point(0, 437);
-            this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(280, 40);
-            this.btnClientes.TabIndex = 8;
-            this.btnClientes.Text = "      Clientes";
-            this.btnClientes.UseVisualStyleBackColor = false;
-            this.btnClientes.MouseEnter += new System.EventHandler(this.EntradaMouse);
-            this.btnClientes.MouseLeave += new System.EventHandler(this.SalidaMouse);
-            // 
-            // btnServicios
-            // 
-            this.btnServicios.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnServicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnServicios.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnServicios.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnServicios.FlatAppearance.BorderSize = 0;
-            this.btnServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnServicios.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnServicios.ForeColor = System.Drawing.Color.White;
-            this.btnServicios.Location = new System.Drawing.Point(0, 391);
-            this.btnServicios.Name = "btnServicios";
-            this.btnServicios.Size = new System.Drawing.Size(280, 40);
-            this.btnServicios.TabIndex = 7;
-            this.btnServicios.Text = "        Servicios";
-            this.btnServicios.UseVisualStyleBackColor = false;
-            this.btnServicios.MouseEnter += new System.EventHandler(this.EntradaMouse);
-            this.btnServicios.MouseLeave += new System.EventHandler(this.SalidaMouse);
-            // 
-            // btnEmpleados
-            // 
-            this.btnEmpleados.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEmpleados.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnEmpleados.FlatAppearance.BorderSize = 0;
-            this.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpleados.ForeColor = System.Drawing.Color.White;
-            this.btnEmpleados.Location = new System.Drawing.Point(0, 345);
-            this.btnEmpleados.Name = "btnEmpleados";
-            this.btnEmpleados.Size = new System.Drawing.Size(280, 40);
-            this.btnEmpleados.TabIndex = 6;
-            this.btnEmpleados.Text = "            Empleados";
-            this.btnEmpleados.UseVisualStyleBackColor = false;
-            this.btnEmpleados.MouseEnter += new System.EventHandler(this.EntradaMouse);
-            this.btnEmpleados.MouseLeave += new System.EventHandler(this.SalidaMouse);
-            // 
-            // btnReportes
-            // 
-            this.btnReportes.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnReportes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReportes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnReportes.FlatAppearance.BorderSize = 0;
-            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportes.ForeColor = System.Drawing.Color.White;
-            this.btnReportes.Location = new System.Drawing.Point(0, 299);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(280, 40);
-            this.btnReportes.TabIndex = 5;
-            this.btnReportes.Text = "        Reportes";
-            this.btnReportes.UseVisualStyleBackColor = false;
-            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
-            this.btnReportes.MouseEnter += new System.EventHandler(this.EntradaMouse);
-            this.btnReportes.MouseLeave += new System.EventHandler(this.SalidaMouse);
-            // 
-            // btnFacturacion
-            // 
-            this.btnFacturacion.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnFacturacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnFacturacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFacturacion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnFacturacion.FlatAppearance.BorderSize = 0;
-            this.btnFacturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFacturacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFacturacion.ForeColor = System.Drawing.Color.White;
-            this.btnFacturacion.Location = new System.Drawing.Point(0, 253);
-            this.btnFacturacion.Name = "btnFacturacion";
-            this.btnFacturacion.Size = new System.Drawing.Size(280, 40);
-            this.btnFacturacion.TabIndex = 4;
-            this.btnFacturacion.Text = "            Facturacion";
-            this.btnFacturacion.UseVisualStyleBackColor = false;
-            this.btnFacturacion.Click += new System.EventHandler(this.btnFacturacion_Click);
-            this.btnFacturacion.MouseEnter += new System.EventHandler(this.EntradaMouse);
-            this.btnFacturacion.MouseLeave += new System.EventHandler(this.SalidaMouse);
-            // 
-            // btnCitas
-            // 
-            this.btnCitas.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnCitas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCitas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCitas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCitas.FlatAppearance.BorderSize = 0;
-            this.btnCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCitas.ForeColor = System.Drawing.Color.White;
-            this.btnCitas.Location = new System.Drawing.Point(0, 207);
-            this.btnCitas.Name = "btnCitas";
-            this.btnCitas.Size = new System.Drawing.Size(280, 40);
-            this.btnCitas.TabIndex = 0;
-            this.btnCitas.Text = "Citas";
-            this.btnCitas.UseVisualStyleBackColor = false;
-            this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
-            this.btnCitas.MouseEnter += new System.EventHandler(this.EntradaMouse);
-            this.btnCitas.MouseLeave += new System.EventHandler(this.SalidaMouse);
-            // 
             // lblCargo
             // 
             this.lblCargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
@@ -347,6 +236,196 @@
             this.lblNombre.Text = "Jean Carlos Ruiz";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // Titulo
+            // 
+            this.Titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(217)))));
+            this.Titulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Titulo.Controls.Add(this.pCerrar);
+            this.Titulo.Controls.Add(this.pMax);
+            this.Titulo.Controls.Add(this.pRestaurar);
+            this.Titulo.Controls.Add(this.pMin);
+            this.Titulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Titulo.Location = new System.Drawing.Point(0, 0);
+            this.Titulo.Name = "Titulo";
+            this.Titulo.Size = new System.Drawing.Size(1300, 50);
+            this.Titulo.TabIndex = 0;
+            this.Titulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Titulo_MouseDown);
+            // 
+            // HorayFecha
+            // 
+            this.HorayFecha.Enabled = true;
+            this.HorayFecha.Tick += new System.EventHandler(this.HorayFecha_Tick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.history_button;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 538);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 39);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pSesion
+            // 
+            this.pSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.pSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pSesion.Image = global::Presentacion.Properties.Resources.power__1_;
+            this.pSesion.Location = new System.Drawing.Point(252, 119);
+            this.pSesion.Name = "pSesion";
+            this.pSesion.Size = new System.Drawing.Size(25, 25);
+            this.pSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pSesion.TabIndex = 0;
+            this.pSesion.TabStop = false;
+            this.toolTip1.SetToolTip(this.pSesion, "Cerrar Sesion");
+            // 
+            // pInfo2
+            // 
+            this.pInfo2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pInfo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.pInfo2.Location = new System.Drawing.Point(0, 513);
+            this.pInfo2.Name = "pInfo2";
+            this.pInfo2.Size = new System.Drawing.Size(280, 86);
+            this.pInfo2.TabIndex = 0;
+            this.pInfo2.TabStop = false;
+            // 
+            // btnClientes
+            // 
+            this.btnClientes.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClientes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnClientes.FlatAppearance.BorderSize = 0;
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.ForeColor = System.Drawing.Color.White;
+            this.btnClientes.Image = global::Presentacion.Properties.Resources.team__3_;
+            this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClientes.Location = new System.Drawing.Point(0, 437);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(280, 40);
+            this.btnClientes.TabIndex = 8;
+            this.btnClientes.Text = "      Clientes";
+            this.toolTip1.SetToolTip(this.btnClientes, "Clientes");
+            this.btnClientes.UseVisualStyleBackColor = false;
+            this.btnClientes.MouseEnter += new System.EventHandler(this.EntradaMouse);
+            this.btnClientes.MouseLeave += new System.EventHandler(this.SalidaMouse);
+            // 
+            // btnServicios
+            // 
+            this.btnServicios.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnServicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnServicios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnServicios.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnServicios.FlatAppearance.BorderSize = 0;
+            this.btnServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServicios.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServicios.ForeColor = System.Drawing.Color.White;
+            this.btnServicios.Image = global::Presentacion.Properties.Resources.services__2_;
+            this.btnServicios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnServicios.Location = new System.Drawing.Point(0, 391);
+            this.btnServicios.Name = "btnServicios";
+            this.btnServicios.Size = new System.Drawing.Size(280, 40);
+            this.btnServicios.TabIndex = 7;
+            this.btnServicios.Text = "        Servicios";
+            this.toolTip1.SetToolTip(this.btnServicios, "Servicios");
+            this.btnServicios.UseVisualStyleBackColor = false;
+            this.btnServicios.MouseEnter += new System.EventHandler(this.EntradaMouse);
+            this.btnServicios.MouseLeave += new System.EventHandler(this.SalidaMouse);
+            // 
+            // btnEmpleados
+            // 
+            this.btnEmpleados.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmpleados.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnEmpleados.FlatAppearance.BorderSize = 0;
+            this.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpleados.ForeColor = System.Drawing.Color.White;
+            this.btnEmpleados.Image = global::Presentacion.Properties.Resources.group__3_;
+            this.btnEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmpleados.Location = new System.Drawing.Point(0, 345);
+            this.btnEmpleados.Name = "btnEmpleados";
+            this.btnEmpleados.Size = new System.Drawing.Size(280, 40);
+            this.btnEmpleados.TabIndex = 6;
+            this.btnEmpleados.Text = "            Empleados";
+            this.toolTip1.SetToolTip(this.btnEmpleados, "Empleados");
+            this.btnEmpleados.UseVisualStyleBackColor = false;
+            this.btnEmpleados.MouseEnter += new System.EventHandler(this.EntradaMouse);
+            this.btnEmpleados.MouseLeave += new System.EventHandler(this.SalidaMouse);
+            // 
+            // btnReportes
+            // 
+            this.btnReportes.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReportes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReportes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReportes.FlatAppearance.BorderSize = 0;
+            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.ForeColor = System.Drawing.Color.White;
+            this.btnReportes.Image = global::Presentacion.Properties.Resources.office_material__2_;
+            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportes.Location = new System.Drawing.Point(0, 299);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(280, 40);
+            this.btnReportes.TabIndex = 5;
+            this.btnReportes.Text = "        Reportes";
+            this.toolTip1.SetToolTip(this.btnReportes, "Reportes");
+            this.btnReportes.UseVisualStyleBackColor = false;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
+            this.btnReportes.MouseEnter += new System.EventHandler(this.EntradaMouse);
+            this.btnReportes.MouseLeave += new System.EventHandler(this.SalidaMouse);
+            // 
+            // btnFacturacion
+            // 
+            this.btnFacturacion.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnFacturacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnFacturacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFacturacion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnFacturacion.FlatAppearance.BorderSize = 0;
+            this.btnFacturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFacturacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFacturacion.ForeColor = System.Drawing.Color.White;
+            this.btnFacturacion.Image = global::Presentacion.Properties.Resources.fact_blanco_1;
+            this.btnFacturacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFacturacion.Location = new System.Drawing.Point(0, 253);
+            this.btnFacturacion.Name = "btnFacturacion";
+            this.btnFacturacion.Size = new System.Drawing.Size(280, 40);
+            this.btnFacturacion.TabIndex = 4;
+            this.btnFacturacion.Text = "            Facturacion";
+            this.toolTip1.SetToolTip(this.btnFacturacion, "Facturacion");
+            this.btnFacturacion.UseVisualStyleBackColor = false;
+            this.btnFacturacion.Click += new System.EventHandler(this.btnFacturacion_Click);
+            this.btnFacturacion.MouseEnter += new System.EventHandler(this.EntradaMouse);
+            this.btnFacturacion.MouseLeave += new System.EventHandler(this.SalidaMouse);
+            // 
+            // btnCitas
+            // 
+            this.btnCitas.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnCitas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCitas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCitas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCitas.FlatAppearance.BorderSize = 0;
+            this.btnCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCitas.ForeColor = System.Drawing.Color.White;
+            this.btnCitas.Image = global::Presentacion.Properties.Resources.Citas_blanco_1;
+            this.btnCitas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCitas.Location = new System.Drawing.Point(0, 207);
+            this.btnCitas.Name = "btnCitas";
+            this.btnCitas.Size = new System.Drawing.Size(280, 40);
+            this.btnCitas.TabIndex = 0;
+            this.btnCitas.Text = "Citas";
+            this.toolTip1.SetToolTip(this.btnCitas, "Citas");
+            this.btnCitas.UseVisualStyleBackColor = false;
+            this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
+            this.btnCitas.MouseEnter += new System.EventHandler(this.EntradaMouse);
+            this.btnCitas.MouseLeave += new System.EventHandler(this.SalidaMouse);
+            // 
             // pUser
             // 
             this.pUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
@@ -382,21 +461,6 @@
             this.pInformacion.Size = new System.Drawing.Size(280, 169);
             this.pInformacion.TabIndex = 0;
             this.pInformacion.TabStop = false;
-            // 
-            // Titulo
-            // 
-            this.Titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(217)))));
-            this.Titulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Titulo.Controls.Add(this.pCerrar);
-            this.Titulo.Controls.Add(this.pMax);
-            this.Titulo.Controls.Add(this.pRestaurar);
-            this.Titulo.Controls.Add(this.pMin);
-            this.Titulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Titulo.Location = new System.Drawing.Point(0, 0);
-            this.Titulo.Name = "Titulo";
-            this.Titulo.Size = new System.Drawing.Size(1300, 50);
-            this.Titulo.TabIndex = 0;
-            this.Titulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Titulo_MouseDown);
             // 
             // pCerrar
             // 
@@ -459,35 +523,6 @@
             this.toolTip1.SetToolTip(this.pMin, "Minimizar");
             this.pMin.Click += new System.EventHandler(this.pMin_Click);
             // 
-            // lblFecha
-            // 
-            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.ForeColor = System.Drawing.Color.White;
-            this.lblFecha.Location = new System.Drawing.Point(32, 566);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(210, 24);
-            this.lblFecha.TabIndex = 12;
-            this.lblFecha.Text = "Fecha";
-            this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblHora
-            // 
-            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.ForeColor = System.Drawing.Color.White;
-            this.lblHora.Location = new System.Drawing.Point(32, 527);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(210, 39);
-            this.lblHora.TabIndex = 13;
-            this.lblHora.Text = "Hora";
-            this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // HorayFecha
-            // 
-            this.HorayFecha.Enabled = true;
-            this.HorayFecha.Tick += new System.EventHandler(this.HorayFecha_Tick);
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -500,12 +535,13 @@
             this.Text = "Principal";
             this.panelPrincipal.ResumeLayout(false);
             this.Menu.ResumeLayout(false);
+            this.Titulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pSesion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pInfo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pInformacion)).EndInit();
-            this.Titulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRestaurar)).EndInit();
@@ -546,5 +582,6 @@
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Timer HorayFecha;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
