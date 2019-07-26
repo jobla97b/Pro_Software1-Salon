@@ -32,10 +32,12 @@
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.Contenedor = new System.Windows.Forms.Panel();
             this.Menu = new System.Windows.Forms.Panel();
+            this.pSesion = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pInfo2 = new System.Windows.Forms.PictureBox();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnServicios = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
@@ -45,25 +47,26 @@
             this.lblCargo = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.Titulo = new System.Windows.Forms.Panel();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pSesion = new System.Windows.Forms.PictureBox();
-            this.pInfo2 = new System.Windows.Forms.PictureBox();
             this.pUser = new System.Windows.Forms.PictureBox();
             this.pMenu = new System.Windows.Forms.PictureBox();
             this.pInformacion = new System.Windows.Forms.PictureBox();
+            this.Titulo = new System.Windows.Forms.Panel();
             this.pCerrar = new System.Windows.Forms.PictureBox();
             this.pMax = new System.Windows.Forms.PictureBox();
             this.pRestaurar = new System.Windows.Forms.PictureBox();
             this.pMin = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.HorayFecha = new System.Windows.Forms.Timer(this.components);
             this.panelPrincipal.SuspendLayout();
             this.Menu.SuspendLayout();
-            this.Titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pSesion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pInfo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pInformacion)).BeginInit();
+            this.Titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRestaurar)).BeginInit();
@@ -96,6 +99,8 @@
             // 
             this.Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Menu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Menu.Controls.Add(this.lblHora);
+            this.Menu.Controls.Add(this.lblFecha);
             this.Menu.Controls.Add(this.pSesion);
             this.Menu.Controls.Add(this.label4);
             this.Menu.Controls.Add(this.label3);
@@ -119,6 +124,17 @@
             this.Menu.Name = "Menu";
             this.Menu.Size = new System.Drawing.Size(280, 600);
             this.Menu.TabIndex = 1;
+            // 
+            // pSesion
+            // 
+            this.pSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.pSesion.Image = global::Presentacion.Properties.Resources.power__1_;
+            this.pSesion.Location = new System.Drawing.Point(252, 119);
+            this.pSesion.Name = "pSesion";
+            this.pSesion.Size = new System.Drawing.Size(25, 25);
+            this.pSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pSesion.TabIndex = 0;
+            this.pSesion.TabStop = false;
             // 
             // label4
             // 
@@ -167,6 +183,16 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Nombre:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pInfo2
+            // 
+            this.pInfo2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pInfo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.pInfo2.Location = new System.Drawing.Point(0, 513);
+            this.pInfo2.Name = "pInfo2";
+            this.pInfo2.Size = new System.Drawing.Size(280, 86);
+            this.pInfo2.TabIndex = 0;
+            this.pInfo2.TabStop = false;
             // 
             // btnClientes
             // 
@@ -321,43 +347,6 @@
             this.lblNombre.Text = "Jean Carlos Ruiz";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Titulo
-            // 
-            this.Titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(217)))));
-            this.Titulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Titulo.Controls.Add(this.pCerrar);
-            this.Titulo.Controls.Add(this.pMax);
-            this.Titulo.Controls.Add(this.pRestaurar);
-            this.Titulo.Controls.Add(this.pMin);
-            this.Titulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Titulo.Location = new System.Drawing.Point(0, 0);
-            this.Titulo.Name = "Titulo";
-            this.Titulo.Size = new System.Drawing.Size(1300, 50);
-            this.Titulo.TabIndex = 0;
-            this.Titulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Titulo_MouseDown);
-            // 
-            // pSesion
-            // 
-            this.pSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.pSesion.Image = global::Presentacion.Properties.Resources.power__1_;
-            this.pSesion.Location = new System.Drawing.Point(3, 532);
-            this.pSesion.Name = "pSesion";
-            this.pSesion.Size = new System.Drawing.Size(50, 50);
-            this.pSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pSesion.TabIndex = 0;
-            this.pSesion.TabStop = false;
-            // 
-            // pInfo2
-            // 
-            this.pInfo2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pInfo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.pInfo2.Location = new System.Drawing.Point(0, 513);
-            this.pInfo2.Name = "pInfo2";
-            this.pInfo2.Size = new System.Drawing.Size(280, 86);
-            this.pInfo2.TabIndex = 0;
-            this.pInfo2.TabStop = false;
-            // 
             // pUser
             // 
             this.pUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
@@ -393,6 +382,21 @@
             this.pInformacion.Size = new System.Drawing.Size(280, 169);
             this.pInformacion.TabIndex = 0;
             this.pInformacion.TabStop = false;
+            // 
+            // Titulo
+            // 
+            this.Titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(217)))));
+            this.Titulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Titulo.Controls.Add(this.pCerrar);
+            this.Titulo.Controls.Add(this.pMax);
+            this.Titulo.Controls.Add(this.pRestaurar);
+            this.Titulo.Controls.Add(this.pMin);
+            this.Titulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Titulo.Location = new System.Drawing.Point(0, 0);
+            this.Titulo.Name = "Titulo";
+            this.Titulo.Size = new System.Drawing.Size(1300, 50);
+            this.Titulo.TabIndex = 0;
+            this.Titulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Titulo_MouseDown);
             // 
             // pCerrar
             // 
@@ -455,6 +459,35 @@
             this.toolTip1.SetToolTip(this.pMin, "Minimizar");
             this.pMin.Click += new System.EventHandler(this.pMin_Click);
             // 
+            // lblFecha
+            // 
+            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ForeColor = System.Drawing.Color.White;
+            this.lblFecha.Location = new System.Drawing.Point(32, 566);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(210, 24);
+            this.lblFecha.TabIndex = 12;
+            this.lblFecha.Text = "Fecha";
+            this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblHora
+            // 
+            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.Color.White;
+            this.lblHora.Location = new System.Drawing.Point(32, 527);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(210, 39);
+            this.lblHora.TabIndex = 13;
+            this.lblHora.Text = "Hora";
+            this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // HorayFecha
+            // 
+            this.HorayFecha.Enabled = true;
+            this.HorayFecha.Tick += new System.EventHandler(this.HorayFecha_Tick);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -467,12 +500,12 @@
             this.Text = "Principal";
             this.panelPrincipal.ResumeLayout(false);
             this.Menu.ResumeLayout(false);
-            this.Titulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pSesion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pInfo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pInformacion)).EndInit();
+            this.Titulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRestaurar)).EndInit();
@@ -510,5 +543,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pSesion;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Timer HorayFecha;
     }
 }

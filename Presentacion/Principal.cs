@@ -78,9 +78,11 @@ namespace Presentacion
         {
             if (Menu.Width == 280)
             {
-                Menu.Width = 70;
-                pMenu.Location = new Point(11, 5);
-                pMenu.Size = new Size(48, 48);
+                Menu.Width = 45;
+                pMenu.Location = new Point(6, 5);
+                pUser.Size = new Size(37, 63);
+                pUser.Location = new Point(3, 71);
+                //pMenu.Size = new Size(48, 48);
                 label4.Visible = false;
 
             }
@@ -89,6 +91,8 @@ namespace Presentacion
                 Menu.Width = 280;
                 pMenu.Location = new Point(245, 3);
                 pMenu.Size = new Size(32, 32);
+                pUser.Location = new Point(3, 62);
+                pUser.Size = new Size(64, 82);
                 label4.Visible = true;
             }
         }
@@ -134,6 +138,14 @@ namespace Presentacion
         }
 
         //Metodos y Eventos del Formulario
+        #region Timer para la fecha y Hora
+        private void HorayFecha_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("HH:mm:ss");//Formato de 24 horas
+            lblFecha.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy");
+        }
+        #endregion
+
         #region Cambio de Color MouseOverBack
 
         private void EntradaMouse(object sender, EventArgs e)
