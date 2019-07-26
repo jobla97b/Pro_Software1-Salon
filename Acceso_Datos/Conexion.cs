@@ -14,7 +14,7 @@ namespace Acceso_Datos
 
         public Conexion()
         {
-            connectionString = "Data Source=JOSEPH-PC;Initial Catalog=Salon; Integrated Security=True";//Esta linea debe de modificarse con el nombre de su servidor y la base si le cambian el nombre
+            connectionString = "Data Source=RAMIRO\\SQLEXPRESS;Initial Catalog=Salon; Integrated Security=True";//Esta linea debe de modificarse con el nombre de su servidor y la base si le cambian el nombre
         }
         protected SqlConnection GetConnection()
         {

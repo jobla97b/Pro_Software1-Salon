@@ -40,6 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cargo.cs" />
+    <Compile Include="Categoria_Servicio.cs" />
+    <Compile Include="Cita.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="Detalle_Cita.cs" />
+    <Compile Include="Empleado.cs" />
+    <Compile Include="Factura.cs" />
+    <Compile Include="Modo_Pago.cs" />
+    <Compile Include="Servicios.cs" />
     <Compile Include="Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
