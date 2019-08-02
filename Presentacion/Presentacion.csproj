@@ -49,11 +49,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CitaAgendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CitaAgendar.Designer.cs">
+      <DependentUpon>CitaAgendar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Citas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Citas.Designer.cs">
       <DependentUpon>Citas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cita_ViewDias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cita_ViewDias.Designer.cs">
+      <DependentUpon>Cita_ViewDias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cita_ViewMeses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cita_ViewMeses.Designer.cs">
+      <DependentUpon>Cita_ViewMeses.cs</DependentUpon>
     </Compile>
     <Compile Include="Facturacion.cs">
       <SubType>Form</SubType>
@@ -81,8 +99,17 @@
     <Compile Include="Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CitaAgendar.resx">
+      <DependentUpon>CitaAgendar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Citas.resx">
       <DependentUpon>Citas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cita_ViewDias.resx">
+      <DependentUpon>Cita_ViewDias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cita_ViewMeses.resx">
+      <DependentUpon>Cita_ViewMeses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion.resx">
       <DependentUpon>Facturacion.cs</DependentUpon>
@@ -170,6 +197,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\history-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Today.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Form-Citas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

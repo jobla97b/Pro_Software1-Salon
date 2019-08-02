@@ -84,7 +84,7 @@ namespace Presentacion
                 pUser.Location = new Point(3, 71);
                 //pMenu.Size = new Size(48, 48);
                 label4.Visible = false;
-
+                //Contenedor.Refresh();
             }
             else
             {
@@ -94,6 +94,7 @@ namespace Presentacion
                 pUser.Location = new Point(3, 62);
                 pUser.Size = new Size(64, 82);
                 label4.Visible = true;
+                //Contenedor.Refresh();
             }
         }
 
@@ -120,7 +121,7 @@ namespace Presentacion
             }
             else
             {
-                Clic_botonesMenu(factura, btnFacturacion); 
+                Clic_botonesMenu(factura, btnFacturacion);
             }
         }
 
@@ -194,6 +195,7 @@ namespace Presentacion
 
         private void ej_FormClosed(Object sender, FormClosedEventArgs e)
         {
+            //MessageBox.Show("Cerrando instancias");
             Form frm = sender as Form;
             if (frm.DialogResult == DialogResult.OK)
             {
@@ -265,6 +267,7 @@ namespace Presentacion
             {
                 if (MessageBox.Show("¿Se encuentra Abierto otro Formulario. Realmente desea Cerrar el actual?", "Mensaje Confirmacion", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
+                    CloseInstancias();
                     cambiocolor(btn);
                     Formulario.FormClosed += ej_FormClosed;
                     AbrirFormularioPanel(Formulario);
@@ -317,6 +320,45 @@ namespace Presentacion
             }
         }
 
+        #endregion
+
+        #region Cierra la instancia del Formulario que se encuentre abierto
+        public void CloseInstancias()
+        {
+            var frm1 = Application.OpenForms.OfType<Citas>().FirstOrDefault();
+            var frm2 = Application.OpenForms.OfType<Facturacion>().FirstOrDefault();
+            var frm3 = Application.OpenForms.OfType<Reportes>().FirstOrDefault();
+            //var frm4 = Application.OpenForms.OfType<Nombre del Formulario que estan trabajando>().FirstOrDefault();
+            //var frm5 = Application.OpenForms.OfType<Nombre del Formulario que estan trabajando>().FirstOrDefault();
+            //var frm6 = Application.OpenForms.OfType<Nombre del Formulario que estan trabajando>().FirstOrDefault();
+            if (frm1 != null)
+            {
+                frm1.Close();
+                MessageBox.Show("Cerro Citas");
+            }
+            if (frm2 != null)
+            {
+                frm2.Close();
+                MessageBox.Show("Cerro Facturacion");
+            }
+            if (frm3 != null)
+            {
+                frm3.Close();
+                MessageBox.Show("Cerro Reportes");
+            }
+            //if (frm4 != null)
+            //{
+            //    frm4.Close();
+            //}
+            //if (frm5 != null)
+            //{
+            //    frm5.Close();
+            //}
+            //if (frm6 != null)
+            //{
+            //    frm6.Close();
+            //}
+        } //Ultimo metodo agregado
         #endregion
 
     }

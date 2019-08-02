@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Cache\CacheLoginUser.cs" />
     <Compile Include="Cache\Estructura_Cargos.cs" />
+    <Compile Include="D_Cita.cs" />
     <Compile Include="D_Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

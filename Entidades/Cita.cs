@@ -10,7 +10,7 @@ namespace Entidades
     {
         public Int16 Id_Cita { get; set; }
         public Int16 Id_Cliente { get; set; }
-        public DateTime Fecha { get; set; }//Revisar
+        public string Fecha { get; set; }//Revisar
         public string Hora { get; set; }
         public string Hora_fin { get; set; }
         public char Estado { get; set; }
@@ -19,7 +19,7 @@ namespace Entidades
         {
         }
 
-        public Cita(Int16 Id_Cita, Int16 Id_Cliente, DateTime Fecha, string Hora, string Hora_fin, char Estado)
+        public Cita(Int16 Id_Cita, Int16 Id_Cliente, string Fecha, string Hora, string Hora_fin, char Estado)
         {
             this.Id_Cita = Id_Cita;
             this.Id_Cliente = Id_Cliente;

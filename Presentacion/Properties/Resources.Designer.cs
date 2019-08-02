@@ -103,6 +103,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Agendar {
+            get {
+                object obj = ResourceManager.GetObject("Agendar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Citas_blanco_1 {
             get {
                 object obj = ResourceManager.GetObject("Citas-blanco-1", resourceCulture);
@@ -116,6 +126,16 @@ namespace Presentacion.Properties {
         internal static System.Drawing.Bitmap fact_blanco_1 {
             get {
                 object obj = ResourceManager.GetObject("fact-blanco-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Form_Citas {
+            get {
+                object obj = ResourceManager.GetObject("Form-Citas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +206,16 @@ namespace Presentacion.Properties {
         internal static System.Drawing.Bitmap team__3_ {
             get {
                 object obj = ResourceManager.GetObject("team (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Today {
+            get {
+                object obj = ResourceManager.GetObject("Today", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
