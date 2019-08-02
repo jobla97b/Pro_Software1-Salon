@@ -55,7 +55,7 @@ namespace Presentacion
             }
             else
                 transparentlabels();
-        }//Resalta automaticamente el mes actual
+        }
         private void transparentlabels()
         {
             Enero.BackColor = Color.FromArgb(50, 50, 50);
@@ -70,7 +70,7 @@ namespace Presentacion
             Octubre.BackColor = Color.FromArgb(50, 50, 50);
             Noviembre.BackColor = Color.FromArgb(50, 50, 50);
             Diciembre.BackColor = Color.FromArgb(50, 50, 50);
-        }//Cambia el color de las etiquetas de los meses menos el actual
+        }
 
         private void completer()
         {

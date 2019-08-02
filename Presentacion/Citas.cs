@@ -75,9 +75,8 @@ namespace Presentacion
             lineShape2.Visible = false;
             pDays.Visible = false;
             pMonth.Visible = false;
-        } //Bloqueo de los botones al abrir el formulario
-
-        public void PAgendarBtn() //Bloqueo los botones al hacer clic sobre Agendar
+        } 
+        public void PAgendarBtn()
         {
             ClearMenu();
             pAgendar.Enabled = false;
@@ -89,7 +88,7 @@ namespace Presentacion
             pMonth.Visible = true;
         }
 
-        public void PTodayBtn() //Bloquea los botones al hacer clic para ver la vista por defecto del fomulario de Citas
+        public void PTodayBtn() 
         {
             ClearMenu();
             pToday.Enabled = false;
@@ -99,7 +98,7 @@ namespace Presentacion
             pMonth.Visible = false;
         }
 
-        public void pDaysBtn()//Bloquea los botones al entrar en modo vista del calendario
+        public void pDaysBtn()
         {
             ClearMenu();
             pAgendar.Enabled = false;
@@ -108,7 +107,7 @@ namespace Presentacion
             pAgendar.BackColor = Color.Yellow;
         }
 
-        public void pMonthBtn()//Bloquea los botones al entrar en modo vista de los meses del año
+        public void pMonthBtn()
         {
             ClearMenu();
             pAgendar.Enabled = false;
@@ -117,7 +116,7 @@ namespace Presentacion
             pAgendar.BackColor = Color.Yellow;
         }
 
-        public void ClearMenu()//Metodo para limpiar el color de seleccion de los pictureBox
+        public void ClearMenu()
         {
             List<Control> lista = new List<Control>();
             foreach (Control c in panelMenu.Controls)
@@ -134,7 +133,7 @@ namespace Presentacion
         #region Metodo para abrir en cita los formularios respectivos de Cita
         public void AbrirFormularioPanel<T>() where T : Form, new()
         {
-            CierreInstancias();//nuevo
+            CierreInstancias();
             Form Formulario = panelContenido.Controls.OfType<T>().FirstOrDefault();
             if (Formulario != null)
             {
@@ -195,17 +194,14 @@ namespace Presentacion
             if (frm1 != null)
             {
                 frm1.Close();
-                MessageBox.Show("Formulario Activo de Agendar formulario por defcto");
             }
             if (frm2 != null)
             {
                 frm2.Close();
-                MessageBox.Show("Formulario de View Dias");
             }
             if (frm3 != null)
             {
                 frm3.Close();
-                MessageBox.Show("Formulario de View Meses");
             }
         } 
         #endregion

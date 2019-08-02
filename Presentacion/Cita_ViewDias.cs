@@ -16,7 +16,6 @@ namespace Presentacion
         {
             InitializeComponent();
             Inicio();
-            //compute();
         }
 
         #region "Declaracion de variables"
@@ -94,7 +93,7 @@ namespace Presentacion
                 label12.BackColor = Color.FromArgb(176, 180, 43);
                 label12.ForeColor = Color.White;
             }
-        }//Indica en PanelMes el mes actual
+        }
 
         public Int32 CheckDay()
         {
@@ -102,7 +101,6 @@ namespace Presentacion
             Dayofweek = Application.CurrentCulture.Calendar.GetDayOfWeek(time).ToString();
             if (Dayofweek == "Sunday")
             {
-                //ndayz = 0;
             }
             else if (Dayofweek == "Monday")
                 ndayz = 1;
@@ -117,7 +115,7 @@ namespace Presentacion
             else if (Dayofweek == "Saturday")
                 ndayz = 6;
             return Convert.ToInt32(x);
-        }//Identifica el dia que cae una fecha
+        }
 
         private void monthchanger(Object sender, MouseEventArgs e)
         {
@@ -126,11 +124,11 @@ namespace Presentacion
             MONTHNO = Convert.ToInt32(yt);
             currentmonthchanger();
             compute();
-        }//Actualiza el calendario en dependencia de labels del PanelMes
+        }
 
         protected internal void compute()
         {
-            if (Convert.ToString(MONTHNO) == null | Convert.ToString(YearNO) == null/* TODO Change to default(_) if this is not a reference type */ )
+            if (Convert.ToString(MONTHNO) == null | Convert.ToString(YearNO) == null)
                 MessageBox.Show("Either year or month is incorrect");
             else
                 try
@@ -143,13 +141,11 @@ namespace Presentacion
                         {
                             lb.BackColor = Color.FromArgb(176, 180, 43);
                             lb.ForeColor = Color.White;
-                            /*lb.Font = new Font("Century Gothic", 11.75, FontStyle.Bold);*/
                         }
                         else
                         {
                             lb.BackColor = panelMes.BackColor;
                             lb.ForeColor = Color.White;
-                            /*lb.Font = new Font("Century Gothic", 11.75);*/
                         }
                     }
                     panelCalendario.Controls.Clear();
@@ -296,7 +292,7 @@ namespace Presentacion
                 catch (FormatException er)
                 {
                 }
-        }//crea las etiquetas del calendario
+        }
 
         public void handdatespanel(Panel tp)
         {
@@ -306,7 +302,7 @@ namespace Presentacion
                 if (lb.Text.Length < 3)
                     lb.Click += handlecalevent;
             }
-        }//Evento cuando se realiza click sobre un dia
+        }
 
         private void handlecalevent(Object sender, EventArgs e)
         {
@@ -330,7 +326,6 @@ namespace Presentacion
             try
             {
                 compute();
-                //panelMes.Refresh();
             }
             catch (Exception ex)
             {
@@ -344,7 +339,6 @@ namespace Presentacion
             {
                 MONTHNO = 12;
                 YearNO = YearNO - 1;
-                //Form1.Year1.Label1.Text = YearNO;
             }
             else
                 MONTHNO -= 1;
@@ -357,7 +351,6 @@ namespace Presentacion
             {
                 MONTHNO = 1;
                 YearNO = YearNO + 1;
-                //label1.Text = Convert.ToString(YearNO);
             }
             else
             MONTHNO += 1;

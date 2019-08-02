@@ -191,18 +191,16 @@ namespace Presentacion
             this.Contenedor.Controls.Add(fh);
             this.Contenedor.Tag = fh;
             fh.Show();
-        } //Metodo para abrir el formulario dentro del panel Contenedor
+        } 
 
         private void ej_FormClosed(Object sender, FormClosedEventArgs e)
         {
-            //MessageBox.Show("Cerrando instancias");
             Form frm = sender as Form;
             if (frm.DialogResult == DialogResult.OK)
             {
                 ClearbtnMenu();
             }
-        }//Metodo para capturar cuando el Formulario contenido en Panel Contenedor se cierre 
-
+        }
 
         #endregion
 
@@ -246,8 +244,8 @@ namespace Presentacion
             {
                 if (c is Button)
                 {
-                    c.ForeColor = Color.White;//Color.FromArgb(20, 125, 217);
-                    c.BackColor = Color.FromArgb(64, 64, 64/*2--38,38,38/*1--59,79,81*/);
+                    c.ForeColor = Color.White;
+                    c.BackColor = Color.FromArgb(64, 64, 64);
                 }
             }
         }
@@ -262,7 +260,7 @@ namespace Presentacion
 
         private void Clic_botonesMenu(Form Formulario, Button btn)
         {
-            btn.BackColor = /*Color.FromArgb(59, 79, 81);*/Color.FromArgb(20, 125, 217);
+            btn.BackColor = Color.FromArgb(20, 125, 217);
             if (revisar() == true)
             {
                 if (MessageBox.Show("¿Se encuentra Abierto otro Formulario. Realmente desea Cerrar el actual?", "Mensaje Confirmacion", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -334,17 +332,17 @@ namespace Presentacion
             if (frm1 != null)
             {
                 frm1.Close();
-                MessageBox.Show("Cerro Citas");
+                //MessageBox.Show("Cerro Citas");
             }
             if (frm2 != null)
             {
                 frm2.Close();
-                MessageBox.Show("Cerro Facturacion");
+                //MessageBox.Show("Cerro Facturacion");
             }
             if (frm3 != null)
             {
                 frm3.Close();
-                MessageBox.Show("Cerro Reportes");
+                //MessageBox.Show("Cerro Reportes");
             }
             //if (frm4 != null)
             //{
