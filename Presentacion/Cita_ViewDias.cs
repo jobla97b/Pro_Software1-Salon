@@ -102,7 +102,7 @@ namespace Presentacion
             Dayofweek = Application.CurrentCulture.Calendar.GetDayOfWeek(time).ToString();
             if (Dayofweek == "Sunday")
             {
-                //ndayz = 0;
+                ndayz = 0;
             }
             else if (Dayofweek == "Monday")
                 ndayz = 1;

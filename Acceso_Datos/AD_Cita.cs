@@ -47,5 +47,35 @@ namespace Acceso_Datos
             }
         }
         #endregion
+
+        #region Metodo de Conteo de Citas
+        public DataTable ConteoCitas(Cita citas)
+        {
+            using (var connection = GetConnection())
+            {
+                DataTable dt = new DataTable("ConteoCita");
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "ListDetalle";
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    //Paso los parametros
+                    SqlParameter Parfecha = new SqlParameter();
+                    Parfecha.ParameterName = "@fecha";
+                    Parfecha.SqlDbType = SqlDbType.NVarChar;
+                    Parfecha.Size = 10;
+                    Parfecha.Value = citas.Fecha;
+                    command.Parameters.Add(Parfecha);
+
+                    //Llenamos La tabla
+                    SqlDataAdapter da = new SqlDataAdapter(command);
+                    da.Fill(dt);
+                    return dt;
+                }
+            }
+        }
+        #endregion
     }
 }

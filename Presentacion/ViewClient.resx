@@ -117,62 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pCT.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7pAAAO6QEOM0IcAAAAB3RJ
-        TUUH4wgFARMnno3msQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAMVSURBVFhH
-        zZY7aBRBGMcPEUUEFbUTRXwUEhsJxuzMJJx6md0FI1oEEWxsxAcKsRFttNRCJQo2FoKFha9CMBYKURBf
-        3O1MooloEFOJYmwMKETj+X1zs5u5yWxyj8T4wY/d+b55/Hfnm0dm1i2QbDePWF8g6IeZxhdsADiihy6Z
-        L+gwUAS+q0qS/tTlj8AX/f4t6cSIx75KgTa/gbHtL5uW6eGVAOysyCNyVJUjehnKbzr6G+a1idb1pRgN
-        VWUwM65dFdmZYmYOF/Q+9of9ave4gH9JmoBXwM0Z5AmQKkA0wC/NFZo3xIR5shbjpq8eeC9fCNN3J01A
-        dzzfBoNGvG4wj7hkXfj+fwrI9mTnBqJ5dcwO6a3AuOmrh45n3oJJBeCA8HxocE3HTV/NBIJsnsYpIDcg
-        oQ5Chwcq5nXrSi48gu+5fONiNTia7rS7PZ9dDrvVBYOTKh6RsyZc0s7wxZZF+PQlO1EPgST7EgG4TIKI
-        7ozhvWQbCjB92r/RL7BAt6uXP1VPQSDpJcxoyz+Ke/1UQL0Rq10xEeAXvHXw/DUOG9ACDJ/ioi2A97J2
-        rDuVOT5yXICuU5HZAgLBDuf62Bp4f2f6yyHvsa3tTwTgWoXnkEGPbmD6hrggpx1TMBZE5BgmMiTncysW
-        MxwWaLPtTwTUmQMKWGJduOHAH7nlirtIBODahDvBoZggYntRgOlD2kQLTROgkPS2OngEu+KMWyQCsiK7
-        BNbl8Rhfkv0owPSV/HTrpAIQSR7hB/kRO++MG0zrFJjAnnHP7/eWumImpQEkfZDLs1X60lgCfEqApG/L
-        EPRUBQJGAun5bZJwR6yM+As/4SrAASuxKQR85gXWqDP+qxWbABy3aodyBl1gpqcJwL5wKrlo2QUX0B+u
-        OjaZUHqbIGmuQ8F1j5sIJKdLAK5/tQ/A7RrKY3YcGAWuWr6i/qnVmS0Ar9t66Z0z/eWk7IS12IQ/IL0m
-        3IqTs98J3RMOhvPL2gG6y+rMFgBz/9R13tvAn7prtkN0l9VZWhLWgu6yOsN7Pu4V8TlfK3CwPdZdzpZl
-        Mn8BOR+EWV70E/8AAAAASUVORK5CYII=
-</value>
-  </data>
-  <metadata name="lineShape4.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>546, 127, 0, 185</value>
+  <metadata name="clientesCitasBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>140, 17</value>
   </metadata>
-  <metadata name="lineShape4.Location" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>546, 127</value>
+  <metadata name="clientesCitasBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>140, 17</value>
   </metadata>
-  <metadata name="lineShape4.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 185</value>
+  <metadata name="salonDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
-  <metadata name="lineShape3.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>537, 127, 0, 185</value>
+  <metadata name="salonDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
-  <metadata name="lineShape3.Location" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>537, 127</value>
+  <metadata name="clientesCitasTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>338, 17</value>
   </metadata>
-  <metadata name="lineShape3.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 185</value>
-  </metadata>
-  <metadata name="lineShape2.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>55, 393, 249, 0</value>
-  </metadata>
-  <metadata name="lineShape2.Location" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>55, 393</value>
-  </metadata>
-  <metadata name="lineShape2.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>249, 0</value>
-  </metadata>
-  <metadata name="lineShape1.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 369, 950, 0</value>
-  </metadata>
-  <metadata name="lineShape1.Location" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 369</value>
-  </metadata>
-  <metadata name="lineShape1.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>950, 0</value>
+  <metadata name="salonDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>530, 17</value>
   </metadata>
 </root>

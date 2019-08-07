@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agendar.Designer.cs">
+      <DependentUpon>Agendar.cs</DependentUpon>
+    </Compile>
     <Compile Include="CitaAgendar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,20 @@
     <Compile Include="Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="SalonDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ViewClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewClient.Designer.cs">
+      <DependentUpon>ViewClient.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Agendar.resx">
+      <DependentUpon>Agendar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CitaAgendar.resx">
       <DependentUpon>CitaAgendar.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +153,9 @@
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewClient.resx">
+      <DependentUpon>ViewClient.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -142,6 +165,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SalonDataSet.xsc">
+      <DependentUpon>SalonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SalonDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonDataSet.xss">
+      <DependentUpon>SalonDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -206,6 +240,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Form-Citas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bolso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconosProgramadas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CitasTotales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CitaCancelada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CitaConfirmada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CalendarDays.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CalendarMonth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BuscarDatagrid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\advertencia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BuscarFecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addcita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Busq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Change.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switchCancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SwitchConfirmar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClientCita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmpCita.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

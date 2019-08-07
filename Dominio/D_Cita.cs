@@ -20,5 +20,15 @@ namespace Dominio
             return citas.ListadoCitas(cit);
         }
         #endregion
+
+        #region Metodo de Conteo Citas
+        public static DataTable D_ConteoCita(string fecha)
+        {
+            AD_Cita citas = new AD_Cita();
+            Cita cit = new Cita();
+            cit.Fecha = fecha;
+            return citas.ConteoCitas(cit);
+        }
+        #endregion
     }
 }
