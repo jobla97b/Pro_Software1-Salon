@@ -176,6 +176,7 @@
             this.pSesion.TabIndex = 0;
             this.pSesion.TabStop = false;
             this.toolTip1.SetToolTip(this.pSesion, "Cerrar Sesion");
+            this.pSesion.Click += new System.EventHandler(this.pSesion_Click);
             // 
             // label4
             // 

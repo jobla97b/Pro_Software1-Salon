@@ -29,55 +29,42 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Citas));
             this.panelTitulo = new System.Windows.Forms.Panel();
-            this.pCerrar = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pDays = new System.Windows.Forms.PictureBox();
-            this.pAgendar = new System.Windows.Forms.PictureBox();
-            this.pToday = new System.Windows.Forms.PictureBox();
-            this.pMonth = new System.Windows.Forms.PictureBox();
-            this.pIcono = new System.Windows.Forms.PictureBox();
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelContenido = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.pDays = new System.Windows.Forms.PictureBox();
+            this.pAgendar = new System.Windows.Forms.PictureBox();
+            this.pToday = new System.Windows.Forms.PictureBox();
+            this.pMonth = new System.Windows.Forms.PictureBox();
+            this.pIcono = new System.Windows.Forms.PictureBox();
+            this.pCerrar = new System.Windows.Forms.PictureBox();
             this.panelTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pCerrar)).BeginInit();
             this.panelMenu.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pDays)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pAgendar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pToday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pMonth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pIcono)).BeginInit();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTitulo
             // 
-            this.panelTitulo.BackColor = System.Drawing.Color.LightGray;
+            this.panelTitulo.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panelTitulo.Controls.Add(this.pCerrar);
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(0, 0);
             this.panelTitulo.Name = "panelTitulo";
             this.panelTitulo.Size = new System.Drawing.Size(950, 30);
             this.panelTitulo.TabIndex = 0;
-            // 
-            // pCerrar
-            // 
-            this.pCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.pCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pCerrar.Image = global::Presentacion.Properties.Resources._031_cancelar;
-            this.pCerrar.Location = new System.Drawing.Point(922, 2);
-            this.pCerrar.Name = "pCerrar";
-            this.pCerrar.Size = new System.Drawing.Size(25, 25);
-            this.pCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pCerrar.TabIndex = 0;
-            this.pCerrar.TabStop = false;
-            this.pCerrar.Click += new System.EventHandler(this.pCerrar_Click);
             // 
             // panelMenu
             // 
@@ -106,74 +93,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Citas";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pDays
-            // 
-            this.pDays.BackColor = System.Drawing.Color.White;
-            this.pDays.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pDays.Image = global::Presentacion.Properties.Resources._009_diseno_grafico;
-            this.pDays.Location = new System.Drawing.Point(363, 2);
-            this.pDays.Name = "pDays";
-            this.pDays.Size = new System.Drawing.Size(48, 50);
-            this.pDays.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pDays.TabIndex = 1;
-            this.pDays.TabStop = false;
-            this.toolTip1.SetToolTip(this.pDays, "Dias del Mes");
-            this.pDays.Click += new System.EventHandler(this.pDays_Click);
-            // 
-            // pAgendar
-            // 
-            this.pAgendar.BackColor = System.Drawing.Color.White;
-            this.pAgendar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pAgendar.Image = global::Presentacion.Properties.Resources.Agendar;
-            this.pAgendar.Location = new System.Drawing.Point(294, 2);
-            this.pAgendar.Name = "pAgendar";
-            this.pAgendar.Size = new System.Drawing.Size(48, 50);
-            this.pAgendar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pAgendar.TabIndex = 4;
-            this.pAgendar.TabStop = false;
-            this.toolTip1.SetToolTip(this.pAgendar, "Agendar Cita");
-            this.pAgendar.Click += new System.EventHandler(this.pAgendar_Click);
-            // 
-            // pToday
-            // 
-            this.pToday.BackColor = System.Drawing.Color.White;
-            this.pToday.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pToday.Image = global::Presentacion.Properties.Resources.Today;
-            this.pToday.Location = new System.Drawing.Point(240, 2);
-            this.pToday.Name = "pToday";
-            this.pToday.Size = new System.Drawing.Size(48, 50);
-            this.pToday.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pToday.TabIndex = 3;
-            this.pToday.TabStop = false;
-            this.toolTip1.SetToolTip(this.pToday, "Citas del Dia");
-            this.pToday.Click += new System.EventHandler(this.pToday_Click);
-            // 
-            // pMonth
-            // 
-            this.pMonth.BackColor = System.Drawing.Color.White;
-            this.pMonth.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pMonth.Image = global::Presentacion.Properties.Resources.office_material__2_;
-            this.pMonth.Location = new System.Drawing.Point(417, 2);
-            this.pMonth.Name = "pMonth";
-            this.pMonth.Size = new System.Drawing.Size(48, 50);
-            this.pMonth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pMonth.TabIndex = 1;
-            this.pMonth.TabStop = false;
-            this.toolTip1.SetToolTip(this.pMonth, "Meses");
-            this.pMonth.Click += new System.EventHandler(this.pMonth_Click);
-            // 
-            // pIcono
-            // 
-            this.pIcono.BackColor = System.Drawing.Color.White;
-            this.pIcono.Enabled = false;
-            this.pIcono.Image = global::Presentacion.Properties.Resources.Form_Citas;
-            this.pIcono.Location = new System.Drawing.Point(3, 2);
-            this.pIcono.Name = "pIcono";
-            this.pIcono.Size = new System.Drawing.Size(48, 50);
-            this.pIcono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pIcono.TabIndex = 0;
-            this.pIcono.TabStop = false;
             // 
             // shapeContainer2
             // 
@@ -228,6 +147,88 @@
             this.panelContenido.Size = new System.Drawing.Size(950, 516);
             this.panelContenido.TabIndex = 0;
             // 
+            // pDays
+            // 
+            this.pDays.BackColor = System.Drawing.Color.White;
+            this.pDays.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pDays.Image = ((System.Drawing.Image)(resources.GetObject("pDays.Image")));
+            this.pDays.Location = new System.Drawing.Point(363, 2);
+            this.pDays.Name = "pDays";
+            this.pDays.Size = new System.Drawing.Size(48, 50);
+            this.pDays.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pDays.TabIndex = 1;
+            this.pDays.TabStop = false;
+            this.toolTip1.SetToolTip(this.pDays, "Dias del Mes");
+            this.pDays.Click += new System.EventHandler(this.pDays_Click);
+            // 
+            // pAgendar
+            // 
+            this.pAgendar.BackColor = System.Drawing.Color.White;
+            this.pAgendar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pAgendar.Image = global::Presentacion.Properties.Resources.Agendar;
+            this.pAgendar.Location = new System.Drawing.Point(294, 2);
+            this.pAgendar.Name = "pAgendar";
+            this.pAgendar.Size = new System.Drawing.Size(48, 50);
+            this.pAgendar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pAgendar.TabIndex = 4;
+            this.pAgendar.TabStop = false;
+            this.toolTip1.SetToolTip(this.pAgendar, "Agendar Cita");
+            this.pAgendar.Click += new System.EventHandler(this.pAgendar_Click);
+            // 
+            // pToday
+            // 
+            this.pToday.BackColor = System.Drawing.Color.White;
+            this.pToday.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pToday.Image = global::Presentacion.Properties.Resources.Today;
+            this.pToday.Location = new System.Drawing.Point(240, 2);
+            this.pToday.Name = "pToday";
+            this.pToday.Size = new System.Drawing.Size(48, 50);
+            this.pToday.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pToday.TabIndex = 3;
+            this.pToday.TabStop = false;
+            this.toolTip1.SetToolTip(this.pToday, "Citas del Dia");
+            this.pToday.Click += new System.EventHandler(this.pToday_Click);
+            // 
+            // pMonth
+            // 
+            this.pMonth.BackColor = System.Drawing.Color.White;
+            this.pMonth.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pMonth.Image = ((System.Drawing.Image)(resources.GetObject("pMonth.Image")));
+            this.pMonth.Location = new System.Drawing.Point(417, 2);
+            this.pMonth.Name = "pMonth";
+            this.pMonth.Size = new System.Drawing.Size(48, 50);
+            this.pMonth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pMonth.TabIndex = 1;
+            this.pMonth.TabStop = false;
+            this.toolTip1.SetToolTip(this.pMonth, "Meses");
+            this.pMonth.Click += new System.EventHandler(this.pMonth_Click);
+            // 
+            // pIcono
+            // 
+            this.pIcono.BackColor = System.Drawing.Color.White;
+            this.pIcono.Enabled = false;
+            this.pIcono.Image = global::Presentacion.Properties.Resources.Form_Citas;
+            this.pIcono.Location = new System.Drawing.Point(3, 2);
+            this.pIcono.Name = "pIcono";
+            this.pIcono.Size = new System.Drawing.Size(48, 50);
+            this.pIcono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pIcono.TabIndex = 0;
+            this.pIcono.TabStop = false;
+            // 
+            // pCerrar
+            // 
+            this.pCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.pCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pCerrar.Image = global::Presentacion.Properties.Resources._031_cancelar;
+            this.pCerrar.Location = new System.Drawing.Point(922, 2);
+            this.pCerrar.Name = "pCerrar";
+            this.pCerrar.Size = new System.Drawing.Size(25, 25);
+            this.pCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pCerrar.TabIndex = 0;
+            this.pCerrar.TabStop = false;
+            this.pCerrar.Click += new System.EventHandler(this.pCerrar_Click);
+            // 
             // Citas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,14 +242,14 @@
             this.Name = "Citas";
             this.Text = "Citas";
             this.panelTitulo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pCerrar)).EndInit();
             this.panelMenu.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pDays)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pAgendar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pToday)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pMonth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pIcono)).EndInit();
-            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pCerrar)).EndInit();
             this.ResumeLayout(false);
 
         }

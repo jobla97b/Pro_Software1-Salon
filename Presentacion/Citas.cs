@@ -169,7 +169,7 @@ namespace Presentacion
                 if (Corroborar == "Agendar") {
                     PTodayBtn();
                     AbrirFormularioPanel<CitaAgendar>();
-                    MessageBox.Show("Se pudo ajajajaja");
+                    //MessageBox.Show("Se pudo ajajajaja");
                 }
                 if (Corroborar == "Dias")
                 {
@@ -177,7 +177,7 @@ namespace Presentacion
                     AbrirFormularioPanel<Cita_ViewDias>();
                 }
             }
-            MessageBox.Show("Se pudo ajajajaja");
+            //MessageBox.Show("Se pudo ajajajaja");
         }
         #endregion
 
@@ -194,14 +194,26 @@ namespace Presentacion
             if (frm1 != null)
             {
                 frm1.Close();
+<<<<<<< HEAD
+=======
+                //MessageBox.Show("Formulario Activo de Agendar formulario por defcto");
+>>>>>>> jeanRuiz
             }
             if (frm2 != null)
             {
                 frm2.Close();
+<<<<<<< HEAD
+=======
+                //MessageBox.Show("Formulario de View Dias");
+>>>>>>> jeanRuiz
             }
             if (frm3 != null)
             {
                 frm3.Close();
+<<<<<<< HEAD
+=======
+                //MessageBox.Show("Formulario de View Meses");
+>>>>>>> jeanRuiz
             }
         } 
         #endregion

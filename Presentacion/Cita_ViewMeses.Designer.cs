@@ -53,6 +53,7 @@
             // 
             // panelTitulo
             // 
+            this.panelTitulo.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panelTitulo.Controls.Add(this.lblAño);
             this.panelTitulo.Controls.Add(this.pAdelante);
             this.panelTitulo.Controls.Add(this.pAtras);
@@ -65,8 +66,9 @@
             // lblAño
             // 
             this.lblAño.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblAño.BackColor = System.Drawing.Color.White;
+            this.lblAño.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblAño.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAño.ForeColor = System.Drawing.Color.White;
             this.lblAño.Location = new System.Drawing.Point(63, 9);
             this.lblAño.Name = "lblAño";
             this.lblAño.Size = new System.Drawing.Size(822, 45);
@@ -101,6 +103,7 @@
             // 
             // panelMeses
             // 
+            this.panelMeses.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panelMeses.Controls.Add(this.Diciembre);
             this.panelMeses.Controls.Add(this.Noviembre);
             this.panelMeses.Controls.Add(this.Octubre);

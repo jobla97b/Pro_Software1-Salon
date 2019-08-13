@@ -54,7 +54,7 @@
             // 
             // panelDia
             // 
-            this.panelDia.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelDia.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panelDia.Controls.Add(this.lbldia);
             this.panelDia.Controls.Add(this.pAdelante);
             this.panelDia.Controls.Add(this.pAtras);
@@ -81,7 +81,7 @@
             // pAdelante
             // 
             this.pAdelante.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pAdelante.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pAdelante.BackColor = System.Drawing.Color.White;
             this.pAdelante.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pAdelante.Location = new System.Drawing.Point(661, 4);
             this.pAdelante.Name = "pAdelante";
@@ -92,7 +92,7 @@
             // 
             // pAtras
             // 
-            this.pAtras.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pAtras.BackColor = System.Drawing.Color.White;
             this.pAtras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pAtras.Location = new System.Drawing.Point(12, 4);
             this.pAtras.Name = "pAtras";
@@ -103,7 +103,7 @@
             // 
             // panelMes
             // 
-            this.panelMes.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panelMes.BackColor = System.Drawing.Color.White;
             this.panelMes.Controls.Add(this.label12);
             this.panelMes.Controls.Add(this.label11);
             this.panelMes.Controls.Add(this.label10);
