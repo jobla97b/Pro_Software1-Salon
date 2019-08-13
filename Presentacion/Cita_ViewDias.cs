@@ -101,10 +101,6 @@ namespace Presentacion
             Dayofweek = Application.CurrentCulture.Calendar.GetDayOfWeek(time).ToString();
             if (Dayofweek == "Sunday")
             {
-<<<<<<< HEAD
-=======
-                ndayz = 0;
->>>>>>> jeanRuiz
             }
             else if (Dayofweek == "Monday")
                 ndayz = 1;
