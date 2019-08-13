@@ -254,6 +254,7 @@
             this.btnModificar.TabIndex = 16;
             this.btnModificar.Text = "      Modificar ";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnCambio
             // 
@@ -459,6 +460,7 @@
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(186, 22);
             this.txtFiltro.TabIndex = 5;
+            this.txtFiltro.TextChanged += new System.EventHandler(this.txtFiltro_TextChanged);
             // 
             // pIconBusqueda
             // 

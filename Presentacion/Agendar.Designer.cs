@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.dataGridViewServicios = new System.Windows.Forms.DataGridView();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,14 +49,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.Id_Cliente = new System.Windows.Forms.TextBox();
             this.panelServicio = new System.Windows.Forms.Panel();
+            this.btnNewServicio = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtEmpleadoNombre = new System.Windows.Forms.TextBox();
             this.txtEmpleadoApellido = new System.Windows.Forms.TextBox();
+            this.txtEmpleadoNombre = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Id_Empleado = new System.Windows.Forms.TextBox();
@@ -59,24 +65,73 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnNewClient = new System.Windows.Forms.Button();
-            this.btnNewServicio = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewServicios)).BeginInit();
             this.panelCliente.SuspendLayout();
             this.panelServicio.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewServicios
             // 
+            this.dataGridViewServicios.AllowUserToAddRows = false;
             this.dataGridViewServicios.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewServicios.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewServicios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column5,
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            this.dataGridViewServicios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridViewServicios.Location = new System.Drawing.Point(4, 52);
+            this.dataGridViewServicios.MultiSelect = false;
             this.dataGridViewServicios.Name = "dataGridViewServicios";
+            this.dataGridViewServicios.ReadOnly = true;
+            this.dataGridViewServicios.RowHeadersVisible = false;
+            this.dataGridViewServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewServicios.Size = new System.Drawing.Size(654, 150);
             this.dataGridViewServicios.TabIndex = 0;
             this.dataGridViewServicios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "ID_Serv";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Servicios";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Duracion";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Costo Servicio";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Moneda";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // txtNombres
             // 
@@ -152,11 +207,13 @@
             // 
             // btnQuitarServicio
             // 
+            this.btnQuitarServicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQuitarServicio.Location = new System.Drawing.Point(618, 9);
             this.btnQuitarServicio.Name = "btnQuitarServicio";
             this.btnQuitarServicio.Size = new System.Drawing.Size(40, 40);
             this.btnQuitarServicio.TabIndex = 12;
             this.btnQuitarServicio.UseVisualStyleBackColor = true;
+            this.btnQuitarServicio.Click += new System.EventHandler(this.btnQuitarServicio_Click);
             // 
             // panelCliente
             // 
@@ -167,7 +224,7 @@
             this.panelCliente.Controls.Add(this.txtNombres);
             this.panelCliente.Controls.Add(this.label2);
             this.panelCliente.Controls.Add(this.txtTelefono);
-            this.panelCliente.Location = new System.Drawing.Point(11, 106);
+            this.panelCliente.Location = new System.Drawing.Point(11, 142);
             this.panelCliente.Name = "panelCliente";
             this.panelCliente.Size = new System.Drawing.Size(666, 84);
             this.panelCliente.TabIndex = 14;
@@ -214,7 +271,7 @@
             // Id_Cliente
             // 
             this.Id_Cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Id_Cliente.Location = new System.Drawing.Point(290, 66);
+            this.Id_Cliente.Location = new System.Drawing.Point(289, 108);
             this.Id_Cliente.Name = "Id_Cliente";
             this.Id_Cliente.Size = new System.Drawing.Size(76, 23);
             this.Id_Cliente.TabIndex = 15;
@@ -226,28 +283,44 @@
             this.panelServicio.Controls.Add(this.btnQuitarServicio);
             this.panelServicio.Controls.Add(this.dataGridViewServicios);
             this.panelServicio.Controls.Add(this.btnNewServicio);
-            this.panelServicio.Location = new System.Drawing.Point(11, 340);
+            this.panelServicio.Location = new System.Drawing.Point(11, 379);
             this.panelServicio.Name = "panelServicio";
             this.panelServicio.Size = new System.Drawing.Size(666, 213);
             this.panelServicio.TabIndex = 15;
             // 
+            // btnNewServicio
+            // 
+            this.btnNewServicio.BackColor = System.Drawing.Color.White;
+            this.btnNewServicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNewServicio.Image = global::Presentacion.Properties.Resources.Busq;
+            this.btnNewServicio.Location = new System.Drawing.Point(233, 9);
+            this.btnNewServicio.Name = "btnNewServicio";
+            this.btnNewServicio.Size = new System.Drawing.Size(40, 40);
+            this.btnNewServicio.TabIndex = 11;
+            this.btnNewServicio.UseVisualStyleBackColor = false;
+            this.btnNewServicio.Click += new System.EventHandler(this.btnNewServicio_Click);
+            // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(100, 559);
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Location = new System.Drawing.Point(100, 598);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(223, 40);
             this.button4.TabIndex = 16;
             this.button4.Text = "Cancelar";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(352, 559);
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Location = new System.Drawing.Point(349, 598);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(223, 40);
             this.button5.TabIndex = 17;
             this.button5.Text = "Guardar";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label8
             // 
@@ -256,7 +329,7 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Image = global::Presentacion.Properties.Resources.IconosProgramadas;
             this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Location = new System.Drawing.Point(11, 9);
+            this.label8.Location = new System.Drawing.Point(12, 46);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(666, 40);
             this.label8.TabIndex = 18;
@@ -270,22 +343,26 @@
             this.panel1.Controls.Add(this.txtEmpleadoNombre);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Location = new System.Drawing.Point(12, 241);
+            this.panel1.Location = new System.Drawing.Point(11, 280);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(354, 93);
             this.panel1.TabIndex = 20;
             // 
-            // label10
+            // txtEmpleadoApellido
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(5, 19);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 17);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "Nombres: ";
+            this.txtEmpleadoApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpleadoApellido.Location = new System.Drawing.Point(108, 51);
+            this.txtEmpleadoApellido.Name = "txtEmpleadoApellido";
+            this.txtEmpleadoApellido.Size = new System.Drawing.Size(239, 23);
+            this.txtEmpleadoApellido.TabIndex = 23;
+            // 
+            // txtEmpleadoNombre
+            // 
+            this.txtEmpleadoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpleadoNombre.Location = new System.Drawing.Point(108, 16);
+            this.txtEmpleadoNombre.Name = "txtEmpleadoNombre";
+            this.txtEmpleadoNombre.Size = new System.Drawing.Size(239, 23);
+            this.txtEmpleadoNombre.TabIndex = 21;
             // 
             // label11
             // 
@@ -299,28 +376,24 @@
             this.label11.TabIndex = 22;
             this.label11.Text = "Apellidos:";
             // 
-            // txtEmpleadoNombre
+            // label10
             // 
-            this.txtEmpleadoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpleadoNombre.Location = new System.Drawing.Point(108, 16);
-            this.txtEmpleadoNombre.Name = "txtEmpleadoNombre";
-            this.txtEmpleadoNombre.Size = new System.Drawing.Size(239, 23);
-            this.txtEmpleadoNombre.TabIndex = 21;
-            // 
-            // txtEmpleadoApellido
-            // 
-            this.txtEmpleadoApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpleadoApellido.Location = new System.Drawing.Point(108, 51);
-            this.txtEmpleadoApellido.Name = "txtEmpleadoApellido";
-            this.txtEmpleadoApellido.Size = new System.Drawing.Size(239, 23);
-            this.txtEmpleadoApellido.TabIndex = 23;
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(5, 19);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(82, 17);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Nombres: ";
             // 
             // label12
             // 
             this.label12.BackColor = System.Drawing.Color.White;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label12.Location = new System.Drawing.Point(388, 198);
+            this.label12.Location = new System.Drawing.Point(384, 229);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(230, 40);
             this.label12.TabIndex = 22;
@@ -334,7 +407,7 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.dateTimePickFecha);
-            this.panel2.Location = new System.Drawing.Point(388, 241);
+            this.panel2.Location = new System.Drawing.Point(388, 280);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(289, 93);
             this.panel2.TabIndex = 23;
@@ -342,19 +415,21 @@
             // Id_Empleado
             // 
             this.Id_Empleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Id_Empleado.Location = new System.Drawing.Point(290, 207);
+            this.Id_Empleado.Location = new System.Drawing.Point(289, 246);
             this.Id_Empleado.Name = "Id_Empleado";
             this.Id_Empleado.Size = new System.Drawing.Size(76, 23);
             this.Id_Empleado.TabIndex = 24;
             // 
             // btnNewEmpleado
             // 
+            this.btnNewEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNewEmpleado.Image = global::Presentacion.Properties.Resources.Busq;
-            this.btnNewEmpleado.Location = new System.Drawing.Point(244, 196);
+            this.btnNewEmpleado.Location = new System.Drawing.Point(244, 237);
             this.btnNewEmpleado.Name = "btnNewEmpleado";
             this.btnNewEmpleado.Size = new System.Drawing.Size(40, 40);
             this.btnNewEmpleado.TabIndex = 21;
             this.btnNewEmpleado.UseVisualStyleBackColor = true;
+            this.btnNewEmpleado.Click += new System.EventHandler(this.btnNewEmpleado_Click);
             // 
             // label9
             // 
@@ -363,7 +438,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.label9.Image = global::Presentacion.Properties.Resources.EmpCita;
             this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label9.Location = new System.Drawing.Point(11, 196);
+            this.label9.Location = new System.Drawing.Point(11, 237);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(227, 40);
             this.label9.TabIndex = 19;
@@ -377,7 +452,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.label5.Image = global::Presentacion.Properties.Resources.ClientCita;
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(12, 63);
+            this.label5.Location = new System.Drawing.Point(12, 99);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(227, 40);
             this.label5.TabIndex = 13;
@@ -387,30 +462,60 @@
             // btnNewClient
             // 
             this.btnNewClient.BackColor = System.Drawing.Color.Transparent;
+            this.btnNewClient.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNewClient.Image = global::Presentacion.Properties.Resources.Busq;
-            this.btnNewClient.Location = new System.Drawing.Point(244, 63);
+            this.btnNewClient.Location = new System.Drawing.Point(244, 99);
             this.btnNewClient.Name = "btnNewClient";
             this.btnNewClient.Size = new System.Drawing.Size(40, 40);
             this.btnNewClient.TabIndex = 10;
             this.btnNewClient.UseVisualStyleBackColor = false;
             this.btnNewClient.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnNewServicio
+            // panel3
             // 
-            this.btnNewServicio.BackColor = System.Drawing.Color.White;
-            this.btnNewServicio.Image = global::Presentacion.Properties.Resources.Busq;
-            this.btnNewServicio.Location = new System.Drawing.Point(233, 9);
-            this.btnNewServicio.Name = "btnNewServicio";
-            this.btnNewServicio.Size = new System.Drawing.Size(40, 40);
-            this.btnNewServicio.TabIndex = 11;
-            this.btnNewServicio.UseVisualStyleBackColor = false;
+            this.panel3.BackColor = System.Drawing.Color.Gray;
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(699, 43);
+            this.panel3.TabIndex = 25;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::Presentacion.Properties.Resources._031_cancelar;
+            this.button1.Location = new System.Drawing.Point(656, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 40);
+            this.button1.TabIndex = 26;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.Red;
+            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Location = new System.Drawing.Point(349, 598);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(223, 40);
+            this.btnModificar.TabIndex = 26;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Visible = false;
             // 
             // Agendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(683, 611);
+            this.ClientSize = new System.Drawing.Size(699, 650);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.Id_Empleado);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label12);
@@ -418,13 +523,15 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.Id_Cliente);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnNewClient);
             this.Controls.Add(this.panelCliente);
             this.Controls.Add(this.panelServicio);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.button5);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(699, 650);
             this.MinimizeBox = false;
@@ -442,14 +549,13 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridViewServicios;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
@@ -481,5 +587,14 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.TextBox Id_Empleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        public System.Windows.Forms.DataGridView dataGridViewServicios;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnModificar;
     }
 }

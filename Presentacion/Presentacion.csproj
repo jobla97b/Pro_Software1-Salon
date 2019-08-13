@@ -110,11 +110,33 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SalonDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SalonDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalonDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ViewClient.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ViewClient.Designer.cs">
       <DependentUpon>ViewClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewEmpleado.Designer.cs">
+      <DependentUpon>ViewEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewServicios.Designer.cs">
+      <DependentUpon>ViewServicios.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Agendar.resx">
       <DependentUpon>Agendar.cs</DependentUpon>
@@ -156,6 +178,12 @@
     <EmbeddedResource Include="ViewClient.resx">
       <DependentUpon>ViewClient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewEmpleado.resx">
+      <DependentUpon>ViewEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewServicios.resx">
+      <DependentUpon>ViewServicios.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -175,6 +203,28 @@
     </None>
     <None Include="SalonDataSet.xss">
       <DependentUpon>SalonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SalonDataSet1.xsc">
+      <DependentUpon>SalonDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SalonDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonDataSet1.xss">
+      <DependentUpon>SalonDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SalonDataSet2.xsc">
+      <DependentUpon>SalonDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SalonDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonDataSet2.xss">
+      <DependentUpon>SalonDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

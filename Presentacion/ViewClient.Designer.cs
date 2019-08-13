@@ -72,6 +72,7 @@
             this.segundoApellidoDataGridViewTextBoxColumn,
             this.telefonoDataGridViewTextBoxColumn,
             this.correoDataGridViewTextBoxColumn});
+            this.dataGridViewClient.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridViewClient.DataSource = this.clientesCitasBindingSource;
             this.dataGridViewClient.Location = new System.Drawing.Point(12, 111);
             this.dataGridViewClient.MultiSelect = false;
@@ -266,7 +267,7 @@
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ViewClient";
+            this.Text = "Clientes";
             this.Load += new System.EventHandler(this.ViewClient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesCitasBindingSource)).EndInit();

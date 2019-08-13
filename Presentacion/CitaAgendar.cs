@@ -20,8 +20,9 @@ namespace Presentacion
             Privilegios();
             labelfecha();
         }
-
+        public DataView dv= new DataView();
         #region Declaracion de variables
+        public static bool IsAgregado = false;
         string consultafecha;
         string fechaparametro;
         string dia, mes;
@@ -37,19 +38,24 @@ namespace Presentacion
         private void button1_Click(object sender, EventArgs e)
         {
             Agendar ag = new Agendar();
+            ag.FormClosed += AgendarClose;
             ag.dateTimePickFecha.Value = Convert.ToDateTime(fechaparametro);
+            Agendar.IsNuevo = true;
+            indexRow = -1;
+            Data_Citas.ClearSelection();
             ag.ShowDialog();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (indexRow!=-1) { MessageBox.Show("Se puede"); Data_Citas.ClearSelection();
-                indexRow = -1;
-            } else { MessageBox.Show("No hay seleccion"); }
             panelBusqueda.Enabled = true;
             btnBuscar.Enabled = false;
             btnNuevo.Enabled = false;
             btnModificar.Enabled = false;
+            btnCambio.Enabled = false;
+            btnConfir.Enabled = false;
+            indexRow = -1;
+            Data_Citas.ClearSelection();
         }
 
         #region Metodo de carga para la label Fecha
@@ -62,7 +68,7 @@ namespace Presentacion
                 fechaparametro= "" + dia + "/" + mes + "/" + A1.ToString();
                 txtFiltro.Text = fechaparametro;
                 FechaActual(d1, m1, A1);
-                Cargardatos('Z');
+                Cargardatos('A');
                 dateTimePickerBuscar.Value = Convert.ToDateTime(fechaparametro);
             }
             else
@@ -105,11 +111,16 @@ namespace Presentacion
         {
             if (CacheLoginUser.Cargo == Estructura_Cargos.Estilista)
             {
-
+                dv.Table= D_Cita.D_ListEstilista(fechaparametro, Estad, Convert.ToInt16(CacheLoginUser.IdEmpleado));
+                this.Data_Citas.DataSource = dv;
+                AjustarColumnas();
+                OcultarColumnas();
             }
             else
             {
-                this.Data_Citas.DataSource = D_Cita.D_Listado(fechaparametro, Estad);
+                dv.Table = D_Cita.D_Listado(fechaparametro, Estad);
+                this.Data_Citas.DataSource = dv;
+                //this.Data_Citas.DataSource = D_Cita.D_Listado(fechaparametro, Estad);
                 //if (Data_Citas.Rows.Count <= 1) { MessageBox.Show("En efecto no hay seleccion"); }
                 AjustarColumnas();
                 OcultarColumnas();
@@ -253,27 +264,44 @@ namespace Presentacion
             if (CacheLoginUser.Cargo==Estructura_Cargos.Estilista)//Evento cuando el ususario sea un empleado y de clic sobre el datgridview
             {
                 DataGridViewRow fila = Data_Citas.CurrentRow;
-                MessageBox.Show("Solo prueba" + fila.Cells[0].Value + " " + fila.Cells[5].Value);
+                Agendar.Cita = Convert.ToInt16(fila.Cells[0].Value);
+                Agendar ag = new Agendar();
+                ag.dateTimePickFecha.Value = Convert.ToDateTime(fila.Cells[1].Value);
+                ag.dateTimePickFecha.Format = DateTimePickerFormat.Short;
+                ag.ShowDialog();
+                //MessageBox.Show("Solo prueba" + fila.Cells[0].Value + " " + fila.Cells[5].Value);
             }
             else//Cualquier otro Ususario va a tener permitido esto
             {
                 if (Data_Citas.CurrentRow.Index > -1) { /*MessageBox.Show("He seleccionado"); */}
                 indexRow = Data_Citas.CurrentRow.Index;//para validar los botones Modificar
                 //Cambio de estado de la cita 
-                if (Data_Citas.CurrentRow.Cells[4].Value.ToString() == "F")
-                {
-                    MessageBox.Show("No puede Realizar cambio sobre citas facturadas");
-                }
+                //if (Data_Citas.CurrentRow.Cells[4].Value.ToString() == "F")
+                //{
+                //    MessageBox.Show("No puede Realizar cambio sobre citas facturadas");
+                //}
                 if (Data_Citas.CurrentRow.Cells[4].Value.ToString() == "C")
                 {
+                    //if (CacheLoginUser.Cargo!=Estructura_Cargos.Estilista){
+                        if (consultafecha != "Pasada"){
+                            btnCambio.Visible = false;
+                            btnConfir.Enabled = true;
+                            btnConfir.Visible = true;
+                        //}
+                    }
                     //btnCambio.Text = "Confirmar";
-                    btnCambio.Visible = false;
-                    btnConfir.Enabled = true;
                 }
                 else if (Data_Citas.CurrentRow.Cells[4].Value.ToString() == "P") {
                     //btnCambio.Text = "Cancelar";
-                    btnConfir.Visible = false;
-                    btnCambio.Enabled = true;
+                    //if (CacheLoginUser.Cargo != Estructura_Cargos.Estilista)
+                    //{
+                        if (consultafecha != "Pasada")
+                        {
+                            btnConfir.Visible = false;
+                            btnCambio.Enabled = true;
+                            btnCambio.Visible = true;
+                        }
+                    //}
                 }
             }
         }
@@ -288,24 +316,88 @@ namespace Presentacion
             Cargardatos('A');
             MessageBox.Show(dateTimePickerBuscar.Value.Date.ToShortDateString());
             panelBusqueda.Enabled = false;
-            if (consultafecha!="Pasada")
+            if (consultafecha != "Pasada")
             {
-                btnNuevo.Enabled = true;
-                btnModificar.Enabled = true;
+                if (CacheLoginUser.Cargo != Estructura_Cargos.Estilista) {//Nuevo
+                    btnNuevo.Enabled = true;
+                    btnModificar.Enabled = true;
+                }
             }
             btnBuscar.Enabled = true;
         }
 
         private void btnCambio_Click(object sender, EventArgs e)
         {
-            btnCambio.Enabled = false;
-            btnConfir.Visible = true;
+            string resp = "";
+            if (MessageBox.Show("Esta Seguro que desea Cancelar la Cita", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+                D_Cita dc = new D_Cita();
+                Int16 Id = Convert.ToInt16(Data_Citas.CurrentRow.Cells[0].Value.ToString()); 
+                resp= dc.D_ActualizaCita(Id, 'C');
+                if (resp.Equals("Ok"))
+                {
+                    btnCambio.Visible = false;
+                    btnConfir.Enabled=false;
+                    btnConfir.Visible = true;
+                    Cargardatos('A');
+                    Data_Citas.ClearSelection();
+                }
+                else
+                {
+                    MessageBox.Show(resp);
+                }
+            }
+            indexRow = -1;
+            Data_Citas.ClearSelection();
         }
 
         private void btnConfir_Click(object sender, EventArgs e)
         {
-            btnConfir.Enabled = false;
-            btnCambio.Visible = true;
+            if (MessageBox.Show("Esta Seguro que desea Activar la Cita", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string resp = "";
+                    D_Cita dc = new D_Cita();
+                    Int16 Id = Convert.ToInt16(Data_Citas.CurrentRow.Cells[0].Value.ToString());
+                    resp = dc.D_ActualizaCita(Id, 'P');
+                    if (resp.Equals("Ok"))
+                    {             
+                        btnConfir.Visible = false;
+                        btnCambio.Enabled = false;
+                        btnCambio.Visible = true;
+                        Cargardatos('A');
+                        Data_Citas.ClearSelection();
+                    }
+                    else
+                    {
+                        MessageBox.Show(resp);
+                    }   
+            }
+            indexRow = -1;
+            Data_Citas.ClearSelection();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (indexRow != -1)
+            {
+                if (Data_Citas.CurrentRow.Cells[4].Value.ToString() == "F") {
+                    MessageBox.Show("No puede mofificar una cita Facturada.","Mensaje Informativo",MessageBoxButtons.OK,MessageBoxIcon.Stop);
+                }
+                else if (Data_Citas.CurrentRow.Cells[4].Value.ToString() == "C") {
+                    MessageBox.Show("Es requerido activar la Cita, para realizar cambios.","Mensaje Informativo", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
+                else {
+                    
+                    Agendar.Modificar = true;
+                    Agendar.Cita = Convert.ToInt16(Data_Citas.CurrentRow.Cells[0].Value.ToString());
+                    Agendar ag = new Agendar();
+                    ag.ShowDialog();
+                    
+                }
+                    //MessageBox.Show("Se puede");
+            }
+            else { MessageBox.Show("Seleccione la Cita que desea modificar."); }
+            indexRow = -1;
+            Data_Citas.ClearSelection();
         }
 
         private void OcultarColumnas()
@@ -315,5 +407,33 @@ namespace Presentacion
         }
         #endregion
 
+        private void IsNuevaCita() {
+            if (IsAgregado){
+                Cargardatos('A');
+            }
+        }
+
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
+        {
+            //if (txtFiltro.Text.Trim().Length == 0)
+            //{
+                
+            //}
+            //else
+            //{
+                dv.RowFilter = string.Format("Primer_Nombre like '%{0}%'",txtFiltro.Text);
+            //(Data_Citas.DataSource as DataTable).DefaultView.RowFilter = ("Primer_Nombre like '" + txtFiltro.Text + "%'");
+            //}
+            Data_Citas.ClearSelection();
+            indexRow = -1;
+        }
+
+        private void AgendarClose(object sender, FormClosedEventArgs e) {
+            Form frm = sender as Form;
+            if (frm.DialogResult == DialogResult.OK){
+                IsNuevaCita();
+                IsAgregado = false;
+            }
+        }
     }
 }
