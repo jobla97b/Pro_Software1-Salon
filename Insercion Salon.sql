@@ -24,6 +24,7 @@ Insert into Cargo values
 
 --------------------Insercion de Empleados---------------------------------------------------------------------------
 Insert into Empleado values
+  0810908960000J   joseph         blanco   blanco        josep@gmail.com      vistas      1 1
 ('0021106900004K','Maritza',null,'Blanco','Blanco',null,'blancoer@gmail.com','Los Robles',1,1),
 ('0021307901234T','Mario','Alberto','Castillo',null,'89002300','marioalber@gmail.com','Bro. Las Torres',2,1),
 ('0091001800000W','Leonardo',null,'Vega','Estrada','22400592','leovega@gmail.com','Bro. Lomalinda',2,1),
