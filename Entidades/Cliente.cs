@@ -9,12 +9,12 @@ namespace Entidades
     public class Cliente
     {
         public Int16 Id_Cliente { get; set; }
-        public char Cedula { get; set; }
+        public string Cedula { get; set; }
         public string Nombre1 { get; set; }
         public string Nombre2 { get; set; }
         public string Apellido1 { get; set; }
         public string Apellido2 { get; set; }
-        public char Telefono { get; set; }
+        public string Telefono { get; set; }
         public string Correo { get; set; }
         public string Direccion { get; set; }
         public bool Estado { get; set; }
@@ -24,7 +24,7 @@ namespace Entidades
 
         }
 
-        public Cliente(Int16 Id_Cliente, char Cedula, string Nombre1, string Nombre2, string Apellido1, string Apellido2, char Telefono, string Correo, string Direccion, bool Estado)
+        public Cliente(Int16 Id_Cliente, string Cedula, string Nombre1, string Nombre2, string Apellido1, string Apellido2, string Telefono, string Correo, string Direccion, bool Estado)
         {
             this.Id_Cliente = Id_Cliente;
             this.Cedula = Cedula;
