@@ -53,7 +53,7 @@
             // 
             // panelTitulo
             // 
-            this.panelTitulo.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.panelTitulo.Controls.Add(this.lblAño);
             this.panelTitulo.Controls.Add(this.pAdelante);
             this.panelTitulo.Controls.Add(this.pAtras);
@@ -66,7 +66,7 @@
             // lblAño
             // 
             this.lblAño.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblAño.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblAño.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.lblAño.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAño.ForeColor = System.Drawing.Color.White;
             this.lblAño.Location = new System.Drawing.Point(63, 9);
@@ -103,7 +103,7 @@
             // 
             // panelMeses
             // 
-            this.panelMeses.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panelMeses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
             this.panelMeses.Controls.Add(this.Diciembre);
             this.panelMeses.Controls.Add(this.Noviembre);
             this.panelMeses.Controls.Add(this.Octubre);
@@ -125,10 +125,10 @@
             // Diciembre
             // 
             this.Diciembre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Diciembre.BackColor = System.Drawing.Color.Aquamarine;
+            this.Diciembre.BackColor = System.Drawing.Color.White;
             this.Diciembre.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Diciembre.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Diciembre.ForeColor = System.Drawing.Color.DimGray;
+            this.Diciembre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.Diciembre.Location = new System.Drawing.Point(711, 297);
             this.Diciembre.Name = "Diciembre";
             this.Diciembre.Size = new System.Drawing.Size(197, 126);
@@ -140,10 +140,10 @@
             // Noviembre
             // 
             this.Noviembre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Noviembre.BackColor = System.Drawing.Color.Aquamarine;
+            this.Noviembre.BackColor = System.Drawing.Color.White;
             this.Noviembre.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Noviembre.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Noviembre.ForeColor = System.Drawing.Color.DimGray;
+            this.Noviembre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.Noviembre.Location = new System.Drawing.Point(484, 297);
             this.Noviembre.Name = "Noviembre";
             this.Noviembre.Size = new System.Drawing.Size(197, 126);
@@ -155,10 +155,10 @@
             // Octubre
             // 
             this.Octubre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Octubre.BackColor = System.Drawing.Color.Aquamarine;
+            this.Octubre.BackColor = System.Drawing.Color.White;
             this.Octubre.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Octubre.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Octubre.ForeColor = System.Drawing.Color.DimGray;
+            this.Octubre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.Octubre.Location = new System.Drawing.Point(257, 297);
             this.Octubre.Name = "Octubre";
             this.Octubre.Size = new System.Drawing.Size(197, 126);
@@ -170,10 +170,10 @@
             // Agosto
             // 
             this.Agosto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Agosto.BackColor = System.Drawing.Color.Aquamarine;
+            this.Agosto.BackColor = System.Drawing.Color.White;
             this.Agosto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Agosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Agosto.ForeColor = System.Drawing.Color.DimGray;
+            this.Agosto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.Agosto.Location = new System.Drawing.Point(711, 157);
             this.Agosto.Name = "Agosto";
             this.Agosto.Size = new System.Drawing.Size(197, 126);
@@ -185,10 +185,10 @@
             // Julio
             // 
             this.Julio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Julio.BackColor = System.Drawing.Color.Aquamarine;
+            this.Julio.BackColor = System.Drawing.Color.White;
             this.Julio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Julio.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Julio.ForeColor = System.Drawing.Color.DimGray;
+            this.Julio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.Julio.Location = new System.Drawing.Point(484, 157);
             this.Julio.Name = "Julio";
             this.Julio.Size = new System.Drawing.Size(197, 126);
@@ -200,10 +200,10 @@
             // Junio
             // 
             this.Junio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Junio.BackColor = System.Drawing.Color.Aquamarine;
+            this.Junio.BackColor = System.Drawing.Color.White;
             this.Junio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Junio.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Junio.ForeColor = System.Drawing.Color.DimGray;
+            this.Junio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.Junio.Location = new System.Drawing.Point(257, 157);
             this.Junio.Name = "Junio";
             this.Junio.Size = new System.Drawing.Size(197, 126);
@@ -215,10 +215,10 @@
             // Septiembre
             // 
             this.Septiembre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Septiembre.BackColor = System.Drawing.Color.Aquamarine;
+            this.Septiembre.BackColor = System.Drawing.Color.White;
             this.Septiembre.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Septiembre.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Septiembre.ForeColor = System.Drawing.Color.DimGray;
+            this.Septiembre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.Septiembre.Location = new System.Drawing.Point(30, 297);
             this.Septiembre.Name = "Septiembre";
             this.Septiembre.Size = new System.Drawing.Size(197, 126);
@@ -230,10 +230,10 @@
             // Mayo
             // 
             this.Mayo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Mayo.BackColor = System.Drawing.Color.Aquamarine;
+            this.Mayo.BackColor = System.Drawing.Color.White;
             this.Mayo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Mayo.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mayo.ForeColor = System.Drawing.Color.DimGray;
+            this.Mayo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.Mayo.Location = new System.Drawing.Point(30, 156);
             this.Mayo.Name = "Mayo";
             this.Mayo.Size = new System.Drawing.Size(197, 126);
@@ -245,10 +245,10 @@
             // Abril
             // 
             this.Abril.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Abril.BackColor = System.Drawing.Color.Aquamarine;
+            this.Abril.BackColor = System.Drawing.Color.White;
             this.Abril.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Abril.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Abril.ForeColor = System.Drawing.Color.DimGray;
+            this.Abril.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.Abril.Location = new System.Drawing.Point(711, 15);
             this.Abril.Name = "Abril";
             this.Abril.Size = new System.Drawing.Size(197, 126);
@@ -260,10 +260,10 @@
             // Marzo
             // 
             this.Marzo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Marzo.BackColor = System.Drawing.Color.Aquamarine;
+            this.Marzo.BackColor = System.Drawing.Color.White;
             this.Marzo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Marzo.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Marzo.ForeColor = System.Drawing.Color.DimGray;
+            this.Marzo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.Marzo.Location = new System.Drawing.Point(484, 15);
             this.Marzo.Name = "Marzo";
             this.Marzo.Size = new System.Drawing.Size(197, 126);
@@ -275,10 +275,10 @@
             // Febero
             // 
             this.Febero.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Febero.BackColor = System.Drawing.Color.Aquamarine;
+            this.Febero.BackColor = System.Drawing.Color.White;
             this.Febero.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Febero.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Febero.ForeColor = System.Drawing.Color.DimGray;
+            this.Febero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.Febero.Location = new System.Drawing.Point(257, 15);
             this.Febero.Name = "Febero";
             this.Febero.Size = new System.Drawing.Size(197, 126);
@@ -290,10 +290,10 @@
             // Enero
             // 
             this.Enero.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Enero.BackColor = System.Drawing.Color.Aquamarine;
+            this.Enero.BackColor = System.Drawing.Color.White;
             this.Enero.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Enero.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Enero.ForeColor = System.Drawing.Color.DimGray;
+            this.Enero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.Enero.Location = new System.Drawing.Point(30, 15);
             this.Enero.Name = "Enero";
             this.Enero.Size = new System.Drawing.Size(197, 126);

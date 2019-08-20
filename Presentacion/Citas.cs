@@ -44,21 +44,18 @@ namespace Presentacion
 
         private void pAgendar_Click(object sender, EventArgs e)
         {
-            //Cita_ViewDias ct = new Cita_ViewDias();
             AbrirFormularioPanel<Cita_ViewDias>();
             PAgendarBtn();
         }
 
         private void pDays_Click(object sender, EventArgs e)
         {
-            //Cita_ViewDias ct = new Cita_ViewDias();
             AbrirFormularioPanel<Cita_ViewDias>();
             pDaysBtn();
         }
 
         private void pMonth_Click(object sender, EventArgs e)
         {
-            //Cita_ViewMeses ct = new Cita_ViewMeses();
             AbrirFormularioPanel<Cita_ViewMeses>();
             pMonthBtn();
         }
@@ -69,9 +66,9 @@ namespace Presentacion
         #region Bloqueo de los botones del menu
         public void InicioBotones()
         {
-            FormInicio();//Abre el formulario de Inicio
+            FormInicio();
             pToday.Enabled = false;
-            pToday.BackColor = Color.Yellow;
+            pToday.BackColor = Color.FromArgb(46, 59, 104);
             lineShape2.Visible = false;
             pDays.Visible = false;
             pMonth.Visible = false;
@@ -80,9 +77,9 @@ namespace Presentacion
         {
             ClearMenu();
             pAgendar.Enabled = false;
-            pAgendar.BackColor = Color.Yellow;
+            pAgendar.BackColor = Color.FromArgb(46, 59, 104);
             pDays.Enabled = false;
-            pDays.BackColor = Color.Yellow;
+            pDays.BackColor = Color.FromArgb(46, 59, 104);
             lineShape2.Visible = true;
             pDays.Visible = true;
             pMonth.Visible = true;
@@ -92,7 +89,7 @@ namespace Presentacion
         {
             ClearMenu();
             pToday.Enabled = false;
-            pToday.BackColor = Color.Yellow;
+            pToday.BackColor = Color.FromArgb(46, 59, 104);
             lineShape2.Visible = false;
             pDays.Visible = false;
             pMonth.Visible = false;
@@ -103,8 +100,8 @@ namespace Presentacion
             ClearMenu();
             pAgendar.Enabled = false;
             pDays.Enabled = false;
-            pDays.BackColor = Color.Yellow;
-            pAgendar.BackColor = Color.Yellow;
+            pDays.BackColor = Color.FromArgb(46, 59, 104);
+            pAgendar.BackColor = Color.FromArgb(46, 59, 104);
         }
 
         public void pMonthBtn()
@@ -112,8 +109,8 @@ namespace Presentacion
             ClearMenu();
             pAgendar.Enabled = false;
             pMonth.Enabled = false;
-            pMonth.BackColor = Color.Yellow;
-            pAgendar.BackColor = Color.Yellow;
+            pMonth.BackColor = Color.FromArgb(46, 59, 104);
+            pAgendar.BackColor = Color.FromArgb(46, 59, 104);
         }
 
         public void ClearMenu()
@@ -182,10 +179,6 @@ namespace Presentacion
         #endregion
 
         #region cierre de instancias
-        //Puedo modificar el metodo de abrir formularios de Citas
-        //ya que al no cerrar el formulario y solamente esconderlo o quitarlo del primer plano
-        //no se realizan las instrucciones que se quieren ejecutar, ya que sigue siendo el mismo formulario que se inicio y no actualiza
-        //Por razones de tiempo se dejara asi. Pero analizar y modificar.
         public void CierreInstancias()
         {
             var frm1 = Application.OpenForms.OfType<CitaAgendar>().FirstOrDefault();

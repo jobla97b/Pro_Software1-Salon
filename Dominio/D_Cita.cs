@@ -43,7 +43,7 @@ namespace Dominio
         }
         #endregion
 
-        #region Metodo de Actualizacion de Cita
+        #region Metodo de Actualizacion de Estado de Cita
         public string D_ActualizaCita(Int16 Id_cliente, char Estado){
             AD_Cita ac = new AD_Cita();
             Cita cita = new Cita();
@@ -81,6 +81,19 @@ namespace Dominio
             cita.Estado = Estado;
             dt.Id_Empleado = id;
             return ac.ListadoEstilista(cita,dt);
+        }
+        #endregion
+
+        #region Metodo de Actualizacion de Cita
+        public string D_ActualizarDatosCita(Int16 Idcita, Int16 Idcliente, string fecha, string hora)
+        {
+            AD_Cita ac = new AD_Cita();
+            Cita cita = new Cita();
+            cita.Id_Cita = Idcita;
+            cita.Id_Cliente = Idcliente;
+            cita.Fecha = fecha;
+            cita.Hora = hora;
+            return ac.actualizarCita(cita);
         }
         #endregion
     }

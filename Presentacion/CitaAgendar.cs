@@ -54,6 +54,8 @@ namespace Presentacion
             btnModificar.Enabled = false;
             btnCambio.Enabled = false;
             btnConfir.Enabled = false;
+            txtFiltro.Enabled = false;
+            Data_Citas.Enabled = false;
             indexRow = -1;
             Data_Citas.ClearSelection();
         }
@@ -63,10 +65,8 @@ namespace Presentacion
         {
             if (Citas.Corroborar != "Agendar")
             {
-                //lblFecha.Text = "Aqui va estar fecha actual";
                 valida_datos_pasados(d1, m1);
                 fechaparametro= "" + dia + "/" + mes + "/" + A1.ToString();
-                txtFiltro.Text = fechaparametro;
                 FechaActual(d1, m1, A1);
                 Cargardatos('A');
                 dateTimePickerBuscar.Value = Convert.ToDateTime(fechaparametro);
@@ -77,7 +77,6 @@ namespace Presentacion
                 valida_datos_pasados(Citas.dia, Citas.mes);
                 fechaparametro = "" + dia + "/" + mes + "/" + Citas.Año.ToString();
                 Cargardatos('A');
-                txtFiltro.Text=fechaparametro;
                 dateTimePickerBuscar.Value = Convert.ToDateTime(fechaparametro);
             }
             Citas.Corroborar = "null";
@@ -94,7 +93,6 @@ namespace Presentacion
             {
                 dia = di.ToString();
             }
-            //para el Mes
             if (meses < 10)
             {
                 mes = "0"+meses.ToString();
@@ -120,8 +118,6 @@ namespace Presentacion
             {
                 dv.Table = D_Cita.D_Listado(fechaparametro, Estad);
                 this.Data_Citas.DataSource = dv;
-                //this.Data_Citas.DataSource = D_Cita.D_Listado(fechaparametro, Estad);
-                //if (Data_Citas.Rows.Count <= 1) { MessageBox.Show("En efecto no hay seleccion"); }
                 AjustarColumnas();
                 OcultarColumnas();
             }
@@ -204,17 +200,14 @@ namespace Presentacion
             int value = DateTime.Compare(Convert.ToDateTime(fechaparametro),Convert.ToDateTime(Actual));
             if (value > 0)
             {
-                //MessageBox.Show("Fecha Futura");
                 consultafecha = "Futura";
             }
             else if (value < 0)
             {
-                //MessageBox.Show("Fecha Pasada");
                 consultafecha = "Pasada";
             }
             else
             {
-                //MessageBox.Show("Fecha Actual");
                 consultafecha = "Actual";
             }
         }
@@ -225,13 +218,11 @@ namespace Presentacion
             {
                 btnNuevo.Enabled = false;
                 btnModificar.Enabled = false;
-                //btnCambio.Enabled = false;
             }
             else if(consultafecha!="Pasada" && CacheLoginUser.Cargo != Estructura_Cargos.Estilista)
             {
                 btnNuevo.Enabled = true;
                 btnModificar.Enabled = true;
-                //btnCambio.Enabled = true;
             }
         }
 
@@ -258,10 +249,10 @@ namespace Presentacion
             }
         }
 
-        private void Data_Citas_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) //evento clic sobre una colummna
+        private void Data_Citas_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) 
         {
             if (e.RowIndex < 0) { return; }
-            if (CacheLoginUser.Cargo==Estructura_Cargos.Estilista)//Evento cuando el ususario sea un empleado y de clic sobre el datgridview
+            if (CacheLoginUser.Cargo==Estructura_Cargos.Estilista)
             {
                 DataGridViewRow fila = Data_Citas.CurrentRow;
                 Agendar.Cita = Convert.ToInt16(fila.Cells[0].Value);
@@ -269,32 +260,20 @@ namespace Presentacion
                 ag.dateTimePickFecha.Value = Convert.ToDateTime(fila.Cells[1].Value);
                 ag.dateTimePickFecha.Format = DateTimePickerFormat.Short;
                 ag.ShowDialog();
-                //MessageBox.Show("Solo prueba" + fila.Cells[0].Value + " " + fila.Cells[5].Value);
             }
-            else//Cualquier otro Ususario va a tener permitido esto
+            else
             {
-                if (Data_Citas.CurrentRow.Index > -1) { /*MessageBox.Show("He seleccionado"); */}
+                if (Data_Citas.CurrentRow.Index > -1) { }
                 indexRow = Data_Citas.CurrentRow.Index;//para validar los botones Modificar
-                //Cambio de estado de la cita 
-                //if (Data_Citas.CurrentRow.Cells[4].Value.ToString() == "F")
-                //{
-                //    MessageBox.Show("No puede Realizar cambio sobre citas facturadas");
-                //}
                 if (Data_Citas.CurrentRow.Cells[4].Value.ToString() == "C")
                 {
-                    //if (CacheLoginUser.Cargo!=Estructura_Cargos.Estilista){
                         if (consultafecha != "Pasada"){
                             btnCambio.Visible = false;
                             btnConfir.Enabled = true;
-                            btnConfir.Visible = true;
-                        //}
+                            btnConfir.Visible = true;                   
                     }
-                    //btnCambio.Text = "Confirmar";
                 }
                 else if (Data_Citas.CurrentRow.Cells[4].Value.ToString() == "P") {
-                    //btnCambio.Text = "Cancelar";
-                    //if (CacheLoginUser.Cargo != Estructura_Cargos.Estilista)
-                    //{
                         if (consultafecha != "Pasada")
                         {
                             btnConfir.Visible = false;
@@ -306,24 +285,22 @@ namespace Presentacion
             }
         }
 
-        private void btnFech_Click(object sender, EventArgs e)//Revisar este evento de busqueda por la fecha en citaagendar
+        private void btnFech_Click(object sender, EventArgs e)
         {
-            //string nom = Application.CurrentCulture.Calendar.GetDayOfWeek(dateTimePickerBuscar.Value.Date).ToString();
-            //string nommes = Application.CurrentCulture.DateTimeFormat.GetMonthName(dateTimePickerBuscar.Value.Month).ToString();
-            //lblFecha.Text = nom + "," + dateTimePickerBuscar.Value.Day + " de " + nommes+ " del " + dateTimePickerBuscar.Value.Year;
             fechaparametro = dateTimePickerBuscar.Value.Date.ToShortDateString().ToString();
-            //txtFiltro.Text = fechaparametro;
             Cargardatos('A');
             MessageBox.Show(dateTimePickerBuscar.Value.Date.ToShortDateString());
             panelBusqueda.Enabled = false;
             if (consultafecha != "Pasada")
             {
-                if (CacheLoginUser.Cargo != Estructura_Cargos.Estilista) {//Nuevo
+                if (CacheLoginUser.Cargo != Estructura_Cargos.Estilista) {
                     btnNuevo.Enabled = true;
                     btnModificar.Enabled = true;
                 }
             }
             btnBuscar.Enabled = true;
+            txtFiltro.Enabled = true;
+            Data_Citas.Enabled = true;
         }
 
         private void btnCambio_Click(object sender, EventArgs e)
@@ -390,10 +367,10 @@ namespace Presentacion
                     Agendar.Modificar = true;
                     Agendar.Cita = Convert.ToInt16(Data_Citas.CurrentRow.Cells[0].Value.ToString());
                     Agendar ag = new Agendar();
+                    ag.FormClosed += ModificarFormClosed;
                     ag.ShowDialog();
                     
                 }
-                    //MessageBox.Show("Se puede");
             }
             else { MessageBox.Show("Seleccione la Cita que desea modificar."); }
             indexRow = -1;
@@ -415,17 +392,9 @@ namespace Presentacion
 
         private void txtFiltro_TextChanged(object sender, EventArgs e)
         {
-            //if (txtFiltro.Text.Trim().Length == 0)
-            //{
-                
-            //}
-            //else
-            //{
                 dv.RowFilter = string.Format("Primer_Nombre like '%{0}%'",txtFiltro.Text);
-            //(Data_Citas.DataSource as DataTable).DefaultView.RowFilter = ("Primer_Nombre like '" + txtFiltro.Text + "%'");
-            //}
             Data_Citas.ClearSelection();
-            indexRow = -1;
+            btnCambio.Enabled = false;
         }
 
         private void AgendarClose(object sender, FormClosedEventArgs e) {
@@ -435,5 +404,15 @@ namespace Presentacion
                 IsAgregado = false;
             }
         }
+
+        private void ModificarFormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form frm = sender as Form;
+            if (frm.DialogResult == DialogResult.OK)
+            {
+                Cargardatos('A');
+            }
+        }
+
     }
 }

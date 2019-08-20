@@ -68,6 +68,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewServicios)).BeginInit();
             this.panelCliente.SuspendLayout();
             this.panelServicio.SuspendLayout();
@@ -193,9 +194,9 @@
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Image = global::Presentacion.Properties.Resources.services__2_;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label3.Location = new System.Drawing.Point(4, 9);
@@ -207,17 +208,22 @@
             // 
             // btnQuitarServicio
             // 
+            this.btnQuitarServicio.BackColor = System.Drawing.Color.White;
             this.btnQuitarServicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQuitarServicio.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnQuitarServicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnQuitarServicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitarServicio.Location = new System.Drawing.Point(618, 9);
             this.btnQuitarServicio.Name = "btnQuitarServicio";
             this.btnQuitarServicio.Size = new System.Drawing.Size(40, 40);
             this.btnQuitarServicio.TabIndex = 12;
-            this.btnQuitarServicio.UseVisualStyleBackColor = true;
+            this.btnQuitarServicio.UseVisualStyleBackColor = false;
             this.btnQuitarServicio.Click += new System.EventHandler(this.btnQuitarServicio_Click);
             // 
             // panelCliente
             // 
-            this.panelCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(217)))));
+            this.panelCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.panelCliente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelCliente.Controls.Add(this.label1);
             this.panelCliente.Controls.Add(this.label4);
             this.panelCliente.Controls.Add(this.txtApellidos);
@@ -250,6 +256,7 @@
             // 
             // dateTimePickHour
             // 
+            this.dateTimePickHour.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePickHour.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickHour.Location = new System.Drawing.Point(125, 51);
             this.dateTimePickHour.Name = "dateTimePickHour";
@@ -278,7 +285,8 @@
             // 
             // panelServicio
             // 
-            this.panelServicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(217)))));
+            this.panelServicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.panelServicio.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelServicio.Controls.Add(this.label3);
             this.panelServicio.Controls.Add(this.btnQuitarServicio);
             this.panelServicio.Controls.Add(this.dataGridViewServicios);
@@ -292,6 +300,9 @@
             // 
             this.btnNewServicio.BackColor = System.Drawing.Color.White;
             this.btnNewServicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNewServicio.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnNewServicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnNewServicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewServicio.Image = global::Presentacion.Properties.Resources.Busq;
             this.btnNewServicio.Location = new System.Drawing.Point(233, 9);
             this.btnNewServicio.Name = "btnNewServicio";
@@ -302,29 +313,41 @@
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(97)))), ((int)(((byte)(238)))));
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(100, 598);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(223, 40);
             this.button4.TabIndex = 16;
             this.button4.Text = "Cancelar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(97)))), ((int)(((byte)(238)))));
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Location = new System.Drawing.Point(349, 598);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(223, 40);
             this.button5.TabIndex = 17;
             this.button5.Text = "Guardar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label8
             // 
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(217)))));
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Image = global::Presentacion.Properties.Resources.IconosProgramadas;
@@ -338,7 +361,8 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(217)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.txtEmpleadoApellido);
             this.panel1.Controls.Add(this.txtEmpleadoNombre);
             this.panel1.Controls.Add(this.label11);
@@ -390,10 +414,10 @@
             // 
             // label12
             // 
-            this.label12.BackColor = System.Drawing.Color.White;
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label12.Location = new System.Drawing.Point(384, 229);
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(390, 235);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(230, 40);
             this.label12.TabIndex = 22;
@@ -402,7 +426,8 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(217)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.dateTimePickHour);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
@@ -422,20 +447,24 @@
             // 
             // btnNewEmpleado
             // 
+            this.btnNewEmpleado.BackColor = System.Drawing.Color.White;
             this.btnNewEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNewEmpleado.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnNewEmpleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnNewEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewEmpleado.Image = global::Presentacion.Properties.Resources.Busq;
             this.btnNewEmpleado.Location = new System.Drawing.Point(244, 237);
             this.btnNewEmpleado.Name = "btnNewEmpleado";
             this.btnNewEmpleado.Size = new System.Drawing.Size(40, 40);
             this.btnNewEmpleado.TabIndex = 21;
-            this.btnNewEmpleado.UseVisualStyleBackColor = true;
+            this.btnNewEmpleado.UseVisualStyleBackColor = false;
             this.btnNewEmpleado.Click += new System.EventHandler(this.btnNewEmpleado_Click);
             // 
             // label9
             // 
-            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Image = global::Presentacion.Properties.Resources.EmpCita;
             this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label9.Location = new System.Drawing.Point(11, 237);
@@ -447,9 +476,9 @@
             // 
             // label5
             // 
-            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Image = global::Presentacion.Properties.Resources.ClientCita;
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label5.Location = new System.Drawing.Point(12, 99);
@@ -461,8 +490,11 @@
             // 
             // btnNewClient
             // 
-            this.btnNewClient.BackColor = System.Drawing.Color.Transparent;
+            this.btnNewClient.BackColor = System.Drawing.Color.White;
             this.btnNewClient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNewClient.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnNewClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnNewClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewClient.Image = global::Presentacion.Properties.Resources.Busq;
             this.btnNewClient.Location = new System.Drawing.Point(244, 99);
             this.btnNewClient.Name = "btnNewClient";
@@ -473,12 +505,12 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Gray;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.panel3.Controls.Add(this.button1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(699, 43);
+            this.panel3.Size = new System.Drawing.Size(690, 43);
             this.panel3.TabIndex = 25;
             // 
             // button1
@@ -488,7 +520,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::Presentacion.Properties.Resources._031_cancelar;
-            this.button1.Location = new System.Drawing.Point(656, 2);
+            this.button1.Location = new System.Drawing.Point(647, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(40, 40);
             this.button1.TabIndex = 26;
@@ -497,10 +529,13 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.Red;
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(97)))), ((int)(((byte)(238)))));
             this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.Location = new System.Drawing.Point(349, 598);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(223, 40);
@@ -508,13 +543,23 @@
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Visible = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Location = new System.Drawing.Point(4, 38);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(682, 606);
+            this.panel4.TabIndex = 27;
             // 
             // Agendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(699, 650);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ClientSize = new System.Drawing.Size(690, 650);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.Id_Empleado);
             this.Controls.Add(this.panel2);
@@ -529,13 +574,14 @@
             this.Controls.Add(this.btnNewClient);
             this.Controls.Add(this.panelCliente);
             this.Controls.Add(this.panelServicio);
-            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(699, 650);
+            this.MaximumSize = new System.Drawing.Size(690, 650);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(699, 650);
+            this.MinimumSize = new System.Drawing.Size(690, 650);
             this.Name = "Agendar";
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
@@ -596,5 +642,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Panel panel4;
     }
 }

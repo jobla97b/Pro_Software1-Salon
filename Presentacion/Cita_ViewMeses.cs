@@ -58,18 +58,18 @@ namespace Presentacion
         }
         private void transparentlabels()
         {
-            Enero.BackColor = Color.FromArgb(50, 50, 50);
-            Febero.BackColor = Color.FromArgb(50, 50, 50);
-            Marzo.BackColor = Color.FromArgb(50, 50, 50);
-            Abril.BackColor = Color.FromArgb(50, 50, 50);
-            Mayo.BackColor = Color.FromArgb(50, 50, 50);
-            Junio.BackColor = Color.FromArgb(50, 50, 50);
-            Julio.BackColor = Color.FromArgb(50, 50, 50);
-            Agosto.BackColor = Color.FromArgb(50, 50, 50);
-            Septiembre.BackColor = Color.FromArgb(50, 50, 50);
-            Octubre.BackColor = Color.FromArgb(50, 50, 50);
-            Noviembre.BackColor = Color.FromArgb(50, 50, 50);
-            Diciembre.BackColor = Color.FromArgb(50, 50, 50);
+            Enero.BackColor = Color.White;
+            Febero.BackColor = Color.White;
+            Marzo.BackColor = Color.White;
+            Abril.BackColor = Color.White;
+            Mayo.BackColor = Color.White;
+            Junio.BackColor = Color.White;
+            Julio.BackColor = Color.White;
+            Agosto.BackColor = Color.White;
+            Septiembre.BackColor = Color.White;
+            Octubre.BackColor = Color.White; ;
+            Noviembre.BackColor = Color.White;
+            Diciembre.BackColor = Color.White;
         }
 
         private void completer()

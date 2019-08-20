@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CitaAgendar));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.lblFecha = new System.Windows.Forms.Label();
             this.panelData = new System.Windows.Forms.Panel();
@@ -66,6 +66,7 @@
             this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panelTitulo.SuspendLayout();
             this.panelData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pCConf)).BeginInit();
@@ -83,7 +84,7 @@
             // 
             // panelTitulo
             // 
-            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(217)))));
+            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
             this.panelTitulo.Controls.Add(this.lblFecha);
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(0, 0);
@@ -95,6 +96,7 @@
             // 
             this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.White;
             this.lblFecha.Location = new System.Drawing.Point(12, 9);
@@ -106,7 +108,7 @@
             // 
             // panelData
             // 
-            this.panelData.BackColor = System.Drawing.Color.White;
+            this.panelData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.panelData.Controls.Add(this.pCConf);
             this.panelData.Controls.Add(this.pCC);
             this.panelData.Controls.Add(this.pCF);
@@ -189,7 +191,7 @@
             // 
             this.panelBotones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBotones.BackColor = System.Drawing.Color.White;
+            this.panelBotones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
             this.panelBotones.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelBotones.Controls.Add(this.btnBuscar);
             this.panelBotones.Controls.Add(this.btnNuevo);
@@ -204,11 +206,13 @@
             // btnBuscar
             // 
             this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(217)))));
-            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Image = global::Presentacion.Properties.Resources.Busq;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.Location = new System.Drawing.Point(64, 61);
@@ -216,18 +220,19 @@
             this.btnBuscar.Size = new System.Drawing.Size(236, 41);
             this.btnBuscar.TabIndex = 17;
             this.btnBuscar.Text = "  Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnNuevo
             // 
             this.btnNuevo.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnNuevo.BackColor = System.Drawing.Color.White;
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(217)))));
-            this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.ForeColor = System.Drawing.Color.White;
             this.btnNuevo.Image = global::Presentacion.Properties.Resources.addcita;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevo.Location = new System.Drawing.Point(64, 10);
@@ -241,11 +246,13 @@
             // btnModificar
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(217)))));
-            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.Image = global::Presentacion.Properties.Resources.Change;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificar.Location = new System.Drawing.Point(64, 112);
@@ -253,20 +260,20 @@
             this.btnModificar.Size = new System.Drawing.Size(236, 41);
             this.btnModificar.TabIndex = 16;
             this.btnModificar.Text = "      Modificar ";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnCambio
             // 
             this.btnCambio.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnCambio.BackColor = System.Drawing.Color.White;
+            this.btnCambio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.btnCambio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCambio.Enabled = false;
             this.btnCambio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(217)))));
-            this.btnCambio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.btnCambio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnCambio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCambio.ForeColor = System.Drawing.Color.Black;
+            this.btnCambio.ForeColor = System.Drawing.Color.White;
             this.btnCambio.Image = global::Presentacion.Properties.Resources.switchCancelar;
             this.btnCambio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCambio.Location = new System.Drawing.Point(64, 163);
@@ -280,11 +287,11 @@
             // btnConfir
             // 
             this.btnConfir.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnConfir.BackColor = System.Drawing.Color.White;
+            this.btnConfir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.btnConfir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConfir.Enabled = false;
             this.btnConfir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(217)))));
-            this.btnConfir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.btnConfir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnConfir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfir.ForeColor = System.Drawing.Color.Black;
@@ -301,8 +308,8 @@
             // panelBusqueda
             // 
             this.panelBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBusqueda.BackColor = System.Drawing.Color.White;
-            this.panelBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.panelBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelBusqueda.Controls.Add(this.dateTimePickerBuscar);
             this.panelBusqueda.Controls.Add(this.btnFech);
             this.panelBusqueda.Controls.Add(this.pBuscarF);
@@ -325,22 +332,23 @@
             // 
             // btnFech
             // 
+            this.btnFech.BackColor = System.Drawing.Color.White;
             this.btnFech.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFech.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnFech.FlatAppearance.BorderSize = 0;
-            this.btnFech.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
-            this.btnFech.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFech.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(217)))));
+            this.btnFech.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnFech.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFech.Image = global::Presentacion.Properties.Resources.BuscarDatagrid;
             this.btnFech.Location = new System.Drawing.Point(316, 48);
             this.btnFech.Name = "btnFech";
             this.btnFech.Size = new System.Drawing.Size(35, 35);
             this.btnFech.TabIndex = 26;
-            this.btnFech.UseVisualStyleBackColor = true;
+            this.btnFech.UseVisualStyleBackColor = false;
             this.btnFech.Click += new System.EventHandler(this.btnFech_Click);
             // 
             // pBuscarF
             // 
-            this.pBuscarF.BackColor = System.Drawing.Color.Transparent;
+            this.pBuscarF.BackColor = System.Drawing.Color.Silver;
+            this.pBuscarF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pBuscarF.Enabled = false;
             this.pBuscarF.Image = global::Presentacion.Properties.Resources.BuscarFecha;
             this.pBuscarF.Location = new System.Drawing.Point(22, 3);
@@ -352,25 +360,27 @@
             // 
             // lblBusqueda
             // 
-            this.lblBusqueda.BackColor = System.Drawing.Color.White;
+            this.lblBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
             this.lblBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblBusqueda.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBusqueda.ForeColor = System.Drawing.Color.White;
             this.lblBusqueda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblBusqueda.Location = new System.Drawing.Point(0, 0);
             this.lblBusqueda.Name = "lblBusqueda";
-            this.lblBusqueda.Size = new System.Drawing.Size(354, 42);
+            this.lblBusqueda.Size = new System.Drawing.Size(356, 42);
             this.lblBusqueda.TabIndex = 19;
             this.lblBusqueda.Text = "Buscar por Fecha";
             this.lblBusqueda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTituloFiltro
             // 
-            this.lblTituloFiltro.BackColor = System.Drawing.Color.White;
-            this.lblTituloFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloFiltro.Location = new System.Drawing.Point(61, 71);
+            this.lblTituloFiltro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.lblTituloFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloFiltro.ForeColor = System.Drawing.Color.White;
+            this.lblTituloFiltro.Location = new System.Drawing.Point(66, 69);
             this.lblTituloFiltro.Name = "lblTituloFiltro";
-            this.lblTituloFiltro.Size = new System.Drawing.Size(89, 22);
+            this.lblTituloFiltro.Size = new System.Drawing.Size(89, 24);
             this.lblTituloFiltro.TabIndex = 13;
             this.lblTituloFiltro.Text = "Nombre";
             this.lblTituloFiltro.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -378,8 +388,9 @@
             // lblConfirmadas
             // 
             this.lblConfirmadas.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblConfirmadas.BackColor = System.Drawing.Color.White;
+            this.lblConfirmadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.lblConfirmadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmadas.ForeColor = System.Drawing.Color.White;
             this.lblConfirmadas.Location = new System.Drawing.Point(749, 419);
             this.lblConfirmadas.Name = "lblConfirmadas";
             this.lblConfirmadas.Size = new System.Drawing.Size(198, 25);
@@ -389,8 +400,9 @@
             // lblCanceladas
             // 
             this.lblCanceladas.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblCanceladas.BackColor = System.Drawing.Color.White;
+            this.lblCanceladas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.lblCanceladas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCanceladas.ForeColor = System.Drawing.Color.White;
             this.lblCanceladas.Location = new System.Drawing.Point(509, 419);
             this.lblCanceladas.Name = "lblCanceladas";
             this.lblCanceladas.Size = new System.Drawing.Size(189, 25);
@@ -400,8 +412,9 @@
             // lblFacturadas
             // 
             this.lblFacturadas.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblFacturadas.BackColor = System.Drawing.Color.White;
+            this.lblFacturadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.lblFacturadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFacturadas.ForeColor = System.Drawing.Color.White;
             this.lblFacturadas.Location = new System.Drawing.Point(269, 419);
             this.lblFacturadas.Name = "lblFacturadas";
             this.lblFacturadas.Size = new System.Drawing.Size(180, 25);
@@ -411,8 +424,9 @@
             // lblTotal
             // 
             this.lblTotal.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblTotal.BackColor = System.Drawing.Color.White;
+            this.lblTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
             this.lblTotal.Location = new System.Drawing.Point(50, 419);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(160, 25);
@@ -423,6 +437,7 @@
             // 
             this.lblMensajeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMensajeData.BackColor = System.Drawing.Color.White;
             this.lblMensajeData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensajeData.ForeColor = System.Drawing.Color.DarkRed;
             this.lblMensajeData.Image = global::Presentacion.Properties.Resources.advertencia;
@@ -440,10 +455,10 @@
             this.lblDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDetalle.AutoSize = true;
-            this.lblDetalle.BackColor = System.Drawing.Color.Transparent;
+            this.lblDetalle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.lblDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDetalle.ForeColor = System.Drawing.Color.Black;
-            this.lblDetalle.Location = new System.Drawing.Point(60, 369);
+            this.lblDetalle.ForeColor = System.Drawing.Color.White;
+            this.lblDetalle.Location = new System.Drawing.Point(65, 369);
             this.lblDetalle.Name = "lblDetalle";
             this.lblDetalle.Size = new System.Drawing.Size(240, 24);
             this.lblDetalle.TabIndex = 7;
@@ -453,30 +468,33 @@
             // 
             this.txtFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFiltro.BackColor = System.Drawing.Color.DimGray;
-            this.txtFiltro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltro.Location = new System.Drawing.Point(156, 71);
+            this.txtFiltro.BackColor = System.Drawing.Color.White;
+            this.txtFiltro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFiltro.ForeColor = System.Drawing.Color.Black;
+            this.txtFiltro.Location = new System.Drawing.Point(161, 69);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(186, 22);
+            this.txtFiltro.Size = new System.Drawing.Size(186, 24);
             this.txtFiltro.TabIndex = 5;
             this.txtFiltro.TextChanged += new System.EventHandler(this.txtFiltro_TextChanged);
             // 
             // pIconBusqueda
             // 
             this.pIconBusqueda.BackColor = System.Drawing.Color.White;
+            this.pIconBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pIconBusqueda.Enabled = false;
             this.pIconBusqueda.Image = global::Presentacion.Properties.Resources.BuscarDatagrid;
             this.pIconBusqueda.Location = new System.Drawing.Point(27, 65);
             this.pIconBusqueda.Name = "pIconBusqueda";
-            this.pIconBusqueda.Size = new System.Drawing.Size(36, 35);
+            this.pIconBusqueda.Size = new System.Drawing.Size(36, 34);
             this.pIconBusqueda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pIconBusqueda.TabIndex = 4;
             this.pIconBusqueda.TabStop = false;
             // 
             // pIconCita
             // 
-            this.pIconCita.BackColor = System.Drawing.Color.Transparent;
+            this.pIconCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.pIconCita.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pIconCita.Enabled = false;
             this.pIconCita.Image = global::Presentacion.Properties.Resources.IconosProgramadas;
             this.pIconCita.Location = new System.Drawing.Point(19, 6);
@@ -488,8 +506,10 @@
             // 
             // lblInfo
             // 
-            this.lblInfo.BackColor = System.Drawing.Color.White;
+            this.lblInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.lblInfo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.ForeColor = System.Drawing.Color.White;
             this.lblInfo.Location = new System.Drawing.Point(69, 6);
             this.lblInfo.Name = "lblInfo";
             this.lblInfo.Size = new System.Drawing.Size(236, 35);
@@ -503,20 +523,21 @@
             this.Data_Citas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Data_Citas.BackgroundColor = System.Drawing.Color.White;
             this.Data_Citas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Data_Citas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Data_Citas.Location = new System.Drawing.Point(19, 108);
             this.Data_Citas.MultiSelect = false;
             this.Data_Citas.Name = "Data_Citas";
             this.Data_Citas.ReadOnly = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Data_Citas.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Data_Citas.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Data_Citas.RowHeadersVisible = false;
             this.Data_Citas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Data_Citas.Size = new System.Drawing.Size(501, 220);
@@ -528,7 +549,7 @@
             // 
             this.pContenedorFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pContenedorFiltro.BackColor = System.Drawing.Color.White;
+            this.pContenedorFiltro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
             this.pContenedorFiltro.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pContenedorFiltro.Enabled = false;
             this.pContenedorFiltro.Location = new System.Drawing.Point(19, 63);
@@ -555,6 +576,8 @@
             // 
             this.lineShape4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.lineShape4.BorderColor = System.Drawing.Color.White;
+            this.lineShape4.BorderWidth = 2;
             this.lineShape4.Name = "lineShape4";
             this.lineShape4.X1 = 546;
             this.lineShape4.X2 = 546;
@@ -565,6 +588,8 @@
             // 
             this.lineShape3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.lineShape3.BorderColor = System.Drawing.Color.White;
+            this.lineShape3.BorderWidth = 2;
             this.lineShape3.Name = "lineShape3";
             this.lineShape3.X1 = 537;
             this.lineShape3.X2 = 537;
@@ -574,10 +599,11 @@
             // lineShape2
             // 
             this.lineShape2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lineShape2.BorderColor = System.Drawing.Color.White;
             this.lineShape2.Enabled = false;
             this.lineShape2.Name = "lineShape2";
             this.lineShape2.X1 = 55;
-            this.lineShape2.X2 = 304;
+            this.lineShape2.X2 = 312;
             this.lineShape2.Y1 = 393;
             this.lineShape2.Y2 = 393;
             // 
@@ -585,6 +611,7 @@
             // 
             this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.lineShape1.BorderColor = System.Drawing.Color.White;
             this.lineShape1.Enabled = false;
             this.lineShape1.Name = "lineShape1";
             this.lineShape1.X1 = 0;
@@ -602,6 +629,7 @@
             this.Controls.Add(this.panelTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CitaAgendar";
+            this.Opacity = 0.8D;
             this.Text = "CitaAgendar";
             this.panelTitulo.ResumeLayout(false);
             this.panelData.ResumeLayout(false);
@@ -657,7 +685,8 @@
         private System.Windows.Forms.PictureBox pCT;
         private System.Windows.Forms.PictureBox pBuscarF;
         private System.Windows.Forms.Button btnFech;
-        private System.Windows.Forms.DateTimePicker dateTimePickerBuscar;
         private System.Windows.Forms.Button btnConfir;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        public System.Windows.Forms.DateTimePicker dateTimePickerBuscar;
     }
 }

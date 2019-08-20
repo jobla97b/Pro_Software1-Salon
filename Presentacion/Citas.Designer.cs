@@ -31,40 +31,54 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Citas));
             this.panelTitulo = new System.Windows.Forms.Panel();
+            this.pCerrar = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pDays = new System.Windows.Forms.PictureBox();
+            this.pAgendar = new System.Windows.Forms.PictureBox();
+            this.pToday = new System.Windows.Forms.PictureBox();
+            this.pMonth = new System.Windows.Forms.PictureBox();
+            this.pIcono = new System.Windows.Forms.PictureBox();
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelContenido = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pDays = new System.Windows.Forms.PictureBox();
-            this.pAgendar = new System.Windows.Forms.PictureBox();
-            this.pToday = new System.Windows.Forms.PictureBox();
-            this.pMonth = new System.Windows.Forms.PictureBox();
-            this.pIcono = new System.Windows.Forms.PictureBox();
-            this.pCerrar = new System.Windows.Forms.PictureBox();
             this.panelTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pCerrar)).BeginInit();
             this.panelMenu.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pDays)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pAgendar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pToday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pMonth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pIcono)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pCerrar)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTitulo
             // 
-            this.panelTitulo.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.panelTitulo.Controls.Add(this.pCerrar);
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(0, 0);
             this.panelTitulo.Name = "panelTitulo";
             this.panelTitulo.Size = new System.Drawing.Size(950, 30);
             this.panelTitulo.TabIndex = 0;
+            // 
+            // pCerrar
+            // 
+            this.pCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.pCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pCerrar.Image = global::Presentacion.Properties.Resources._031_cancelar;
+            this.pCerrar.Location = new System.Drawing.Point(922, 2);
+            this.pCerrar.Name = "pCerrar";
+            this.pCerrar.Size = new System.Drawing.Size(25, 25);
+            this.pCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pCerrar.TabIndex = 0;
+            this.pCerrar.TabStop = false;
+            this.pCerrar.Click += new System.EventHandler(this.pCerrar_Click);
             // 
             // panelMenu
             // 
@@ -85,67 +99,14 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(217)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.label1.Location = new System.Drawing.Point(57, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Citas";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // shapeContainer2
-            // 
-            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer2.Name = "shapeContainer2";
-            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape2,
-            this.lineShape1});
-            this.shapeContainer2.Size = new System.Drawing.Size(950, 54);
-            this.shapeContainer2.TabIndex = 2;
-            this.shapeContainer2.TabStop = false;
-            // 
-            // lineShape2
-            // 
-            this.lineShape2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.lineShape2.BorderWidth = 3;
-            this.lineShape2.Enabled = false;
-            this.lineShape2.Name = "lineShape2";
-            this.lineShape2.X1 = 352;
-            this.lineShape2.X2 = 352;
-            this.lineShape2.Y1 = 47;
-            this.lineShape2.Y2 = 5;
-            // 
-            // lineShape1
-            // 
-            this.lineShape1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.lineShape1.BorderWidth = 3;
-            this.lineShape1.Enabled = false;
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 228;
-            this.lineShape1.X2 = 228;
-            this.lineShape1.Y1 = 47;
-            this.lineShape1.Y2 = 5;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.panelContenido);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 84);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(950, 516);
-            this.panel2.TabIndex = 2;
-            // 
-            // panelContenido
-            // 
-            this.panelContenido.BackColor = System.Drawing.Color.LightGray;
-            this.panelContenido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenido.Location = new System.Drawing.Point(0, 0);
-            this.panelContenido.Name = "panelContenido";
-            this.panelContenido.Size = new System.Drawing.Size(950, 516);
-            this.panelContenido.TabIndex = 0;
             // 
             // pDays
             // 
@@ -215,19 +176,58 @@
             this.pIcono.TabIndex = 0;
             this.pIcono.TabStop = false;
             // 
-            // pCerrar
+            // shapeContainer2
             // 
-            this.pCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.pCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pCerrar.Image = global::Presentacion.Properties.Resources._031_cancelar;
-            this.pCerrar.Location = new System.Drawing.Point(922, 2);
-            this.pCerrar.Name = "pCerrar";
-            this.pCerrar.Size = new System.Drawing.Size(25, 25);
-            this.pCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pCerrar.TabIndex = 0;
-            this.pCerrar.TabStop = false;
-            this.pCerrar.Click += new System.EventHandler(this.pCerrar_Click);
+            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer2.Name = "shapeContainer2";
+            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape2,
+            this.lineShape1});
+            this.shapeContainer2.Size = new System.Drawing.Size(950, 54);
+            this.shapeContainer2.TabIndex = 2;
+            this.shapeContainer2.TabStop = false;
+            // 
+            // lineShape2
+            // 
+            this.lineShape2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.lineShape2.BorderWidth = 3;
+            this.lineShape2.Enabled = false;
+            this.lineShape2.Name = "lineShape2";
+            this.lineShape2.X1 = 352;
+            this.lineShape2.X2 = 352;
+            this.lineShape2.Y1 = 47;
+            this.lineShape2.Y2 = 5;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.lineShape1.BorderWidth = 3;
+            this.lineShape1.Enabled = false;
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 228;
+            this.lineShape1.X2 = 228;
+            this.lineShape1.Y1 = 47;
+            this.lineShape1.Y2 = 5;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.panelContenido);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 84);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(950, 516);
+            this.panel2.TabIndex = 2;
+            // 
+            // panelContenido
+            // 
+            this.panelContenido.BackColor = System.Drawing.Color.LightGray;
+            this.panelContenido.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenido.Location = new System.Drawing.Point(0, 0);
+            this.panelContenido.Name = "panelContenido";
+            this.panelContenido.Size = new System.Drawing.Size(950, 516);
+            this.panelContenido.TabIndex = 0;
             // 
             // Citas
             // 
@@ -242,14 +242,14 @@
             this.Name = "Citas";
             this.Text = "Citas";
             this.panelTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pCerrar)).EndInit();
             this.panelMenu.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pDays)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pAgendar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pToday)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pMonth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pIcono)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pCerrar)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

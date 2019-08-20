@@ -214,7 +214,7 @@ namespace Acceso_Datos
                 return BM;
             }
         }
-        #endregion
+        #endregion//revisar
 
         #region Metodo para cargar Servicios para modificacion
         public DataTable ServModificar(Cita cita)
@@ -250,7 +250,7 @@ namespace Acceso_Datos
                 return SBM;
             }
         }
-        #endregion
+        #endregion//revisar
 
         #region Metodo de Listado de Cita para Estilista
         public DataTable ListadoEstilista(Cita cita,Detalle_Cita dtcita){
@@ -298,6 +298,62 @@ namespace Acceso_Datos
                     dt = null;
                 }
                 return dt;
+            }
+        }
+        #endregion
+
+        #region Metodo de actualizacion de Cita
+        public string actualizarCita(Cita cita)
+        {
+            using (var connection = GetConnection())
+            {
+                string respuesta = "";
+                try
+                {
+                    connection.Open();
+                    using (var command = new SqlCommand())
+                    {
+                        command.Connection = connection;
+                        command.CommandText = "ActualizarCita";
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        //Paso los parametros
+                        SqlParameter ParIdCit = new SqlParameter();
+                        ParIdCit.ParameterName = "@Id_cita";
+                        ParIdCit.SqlDbType = SqlDbType.Int;
+                        ParIdCit.Value = cita.Id_Cita;
+                        command.Parameters.Add(ParIdCit);
+
+                        SqlParameter ParIdcliente = new SqlParameter();
+                        ParIdcliente.ParameterName = "@IdCliente";
+                        ParIdcliente.SqlDbType = SqlDbType.Int;
+                        ParIdcliente.Value = cita.Id_Cliente;
+                        command.Parameters.Add(ParIdcliente);
+
+                        SqlParameter ParFecha = new SqlParameter();
+                        ParFecha.ParameterName = "@fecha";
+                        ParFecha.SqlDbType = SqlDbType.NVarChar;
+                        ParFecha.Size = 10;
+                        ParFecha.Value = cita.Fecha;
+                        command.Parameters.Add(ParFecha);
+
+                        SqlParameter ParHora = new SqlParameter();
+                        ParHora.ParameterName = "@Hora";
+                        ParHora.SqlDbType = SqlDbType.NVarChar;
+                        ParHora.Size = 5;
+                        ParHora.Value = cita.Hora;
+                        command.Parameters.Add(ParHora);
+
+                        //Ejecutamos el comando 
+                        respuesta = command.ExecuteNonQuery() >= 1 ? "Ok" : "Error. No se Ingreso";
+
+                    }
+                }
+                catch (Exception e)
+                {
+                    respuesta = e.Message;
+                }
+                return respuesta;
             }
         }
         #endregion
