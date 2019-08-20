@@ -118,55 +118,106 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="034-maximizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\034-maximizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="menu_horizontal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu_horizontal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="services (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\services (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fact-blanco-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fact-blanco-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Agendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Agendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Citas-blanco-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Citas-blanco-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="015-menos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\015-menos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="team (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\team (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="office-material (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\office-material (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Today" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Today.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="power (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\power (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="031-cancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\031-cancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="history-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\history-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="009-diseno-grafico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\009-diseno-grafico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="group (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\group (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="menu_horizontal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_horizontal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="office-material (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\office-material (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CitasTotales" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CitasTotales.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="switchCancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\switchCancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fact-blanco-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fact-blanco-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CalendarDays" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CalendarDays.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="services (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\services (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bolso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bolso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BuscarDatagrid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BuscarDatagrid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="history-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\history-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SwitchConfirmar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SwitchConfirmar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Agendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Agendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CitaCancelada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CitaCancelada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="group (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\group (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="031-cancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\031-cancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Form-Citas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Form-Citas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="009-diseno-grafico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\009-diseno-grafico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CitaConfirmada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CitaConfirmada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="034-maximizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\034-maximizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="team (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\team (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EmpCita" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EmpCita.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="advertencia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\advertencia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="015-menos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\015-menos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="addcita" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\addcita.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconosProgramadas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconosProgramadas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Busq" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Busq.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Citas-blanco-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Citas-blanco-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BuscarFecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BuscarFecha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Change" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Change.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ClientCita" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ClientCita.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CalendarMonth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CalendarMonth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="power (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\power (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

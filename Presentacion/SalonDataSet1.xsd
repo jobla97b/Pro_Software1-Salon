@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SalonDataSet1" targetNamespace="http://tempuri.org/SalonDataSet1.xsd" xmlns:mstns="http://tempuri.org/SalonDataSet1.xsd" xmlns="http://tempuri.org/SalonDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SalonConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SalonConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Presentacion.Properties.Settings.GlobalReference.Default.SalonConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ServiciosCitasTableAdapter" GeneratorDataComponentClassName="ServiciosCitasTableAdapter" Name="ServiciosCitas" UserDataComponentName="ServiciosCitasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SalonConnectionString (Settings)" DbObjectName="Salon.dbo.ServiciosCitas" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, Categoria, Nombre_Servicio, Tiempo_Servicio, Costo, Moneda FROM dbo.ServiciosCitas</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="Categoria" DataSetColumn="Categoria" />
+              <Mapping SourceColumn="Nombre_Servicio" DataSetColumn="Nombre_Servicio" />
+              <Mapping SourceColumn="Tiempo_Servicio" DataSetColumn="Tiempo_Servicio" />
+              <Mapping SourceColumn="Costo" DataSetColumn="Costo" />
+              <Mapping SourceColumn="Moneda" DataSetColumn="Moneda" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SalonDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SalonDataSet1" msprop:Generator_UserDSName="SalonDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ServiciosCitas" msprop:Generator_TableClassName="ServiciosCitasDataTable" msprop:Generator_TableVarName="tableServiciosCitas" msprop:Generator_TablePropName="ServiciosCitas" msprop:Generator_RowDeletingName="ServiciosCitasRowDeleting" msprop:Generator_RowChangingName="ServiciosCitasRowChanging" msprop:Generator_RowEvHandlerName="ServiciosCitasRowChangeEventHandler" msprop:Generator_RowDeletedName="ServiciosCitasRowDeleted" msprop:Generator_UserTableName="ServiciosCitas" msprop:Generator_RowChangedName="ServiciosCitasRowChanged" msprop:Generator_RowEvArgName="ServiciosCitasRowChangeEvent" msprop:Generator_RowClassName="ServiciosCitasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:short" />
+              <xs:element name="Categoria" msprop:Generator_ColumnVarNameInTable="columnCategoria" msprop:Generator_ColumnPropNameInRow="Categoria" msprop:Generator_ColumnPropNameInTable="CategoriaColumn" msprop:Generator_UserColumnName="Categoria">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre_Servicio" msprop:Generator_ColumnVarNameInTable="columnNombre_Servicio" msprop:Generator_ColumnPropNameInRow="Nombre_Servicio" msprop:Generator_ColumnPropNameInTable="Nombre_ServicioColumn" msprop:Generator_UserColumnName="Nombre_Servicio">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tiempo_Servicio" msprop:Generator_ColumnVarNameInTable="columnTiempo_Servicio" msprop:Generator_ColumnPropNameInRow="Tiempo_Servicio" msprop:Generator_ColumnPropNameInTable="Tiempo_ServicioColumn" msprop:Generator_UserColumnName="Tiempo_Servicio" type="xs:duration" />
+              <xs:element name="Costo" msprop:Generator_ColumnVarNameInTable="columnCosto" msprop:Generator_ColumnPropNameInRow="Costo" msprop:Generator_ColumnPropNameInTable="CostoColumn" msprop:Generator_UserColumnName="Costo" type="xs:decimal" />
+              <xs:element name="Moneda" msprop:Generator_ColumnVarNameInTable="columnMoneda" msprop:Generator_ColumnPropNameInRow="Moneda" msprop:Generator_ColumnPropNameInTable="MonedaColumn" msprop:Generator_UserColumnName="Moneda">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ServiciosCitas" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

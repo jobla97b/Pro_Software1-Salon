@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Citas));
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.pCerrar = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
@@ -57,7 +58,7 @@
             // 
             // panelTitulo
             // 
-            this.panelTitulo.BackColor = System.Drawing.Color.LightGray;
+            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.panelTitulo.Controls.Add(this.pCerrar);
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(0, 0);
@@ -98,8 +99,8 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(217)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.label1.Location = new System.Drawing.Point(57, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 42);
@@ -111,7 +112,7 @@
             // 
             this.pDays.BackColor = System.Drawing.Color.White;
             this.pDays.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pDays.Image = global::Presentacion.Properties.Resources._009_diseno_grafico;
+            this.pDays.Image = ((System.Drawing.Image)(resources.GetObject("pDays.Image")));
             this.pDays.Location = new System.Drawing.Point(363, 2);
             this.pDays.Name = "pDays";
             this.pDays.Size = new System.Drawing.Size(48, 50);
@@ -153,7 +154,7 @@
             // 
             this.pMonth.BackColor = System.Drawing.Color.White;
             this.pMonth.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pMonth.Image = global::Presentacion.Properties.Resources.office_material__2_;
+            this.pMonth.Image = ((System.Drawing.Image)(resources.GetObject("pMonth.Image")));
             this.pMonth.Location = new System.Drawing.Point(417, 2);
             this.pMonth.Name = "pMonth";
             this.pMonth.Size = new System.Drawing.Size(48, 50);

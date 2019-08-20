@@ -49,6 +49,13 @@ namespace Presentacion
             //}
         }
 
+        private void pSesion_Click(object sender, EventArgs e)
+        {
+            Login lg = new Login();
+            lg.Show();
+            this.Close();
+        }
+
         private void pMax_Click(object sender, EventArgs e)
         {
             Lx = this.Location.X;
@@ -283,7 +290,6 @@ namespace Presentacion
                 AbrirFormularioPanel(Formulario);   
             }
         }
-
         #endregion
 
         #region Carga los Datos del usuario en Formulario Principal  
